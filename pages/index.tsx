@@ -1,13 +1,11 @@
 //Types
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 
 //Components
-import Home from '@components/Home/Home.component'
+import Home from '@components/Home/Home.component';
 
 const HomePage: NextPage = () => {
-  return (
-    <Home />
-  )
-}
+  return <Home />;
+};
 
-export default HomePage
+export default HomePage;

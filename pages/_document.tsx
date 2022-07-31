@@ -5,7 +5,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-            <link rel="icon" href="/egg.png" />     
+          <link rel="icon" href="/egg.png" />
         </Head>
         <body style={{ fontFamily: 'Manrope' }}>
           <Main />
