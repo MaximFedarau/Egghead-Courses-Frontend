@@ -2,14 +2,15 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { HEADER_NAVIGATION_LABELS } from '@constants/data';
+import { HEADER_NAVIGATION_LABELS, HEADER_MOBILE_ICONS } from '@constants/data';
 
 //Next Components
 import Image from 'next/image';
 
 //Components
-import Button from '@components/Defaults/Button/Button.component';
-import ImageButton from '@components/Defaults/ImageButton/ImageButton.component';
+import { HeaderButton } from '@components/Defaults/Button/Button.component';
+import { HeaderLink } from '@components/Defaults/Text/Text.component';
+import { HeaderImageButton } from '@components/Defaults/ImageButton/ImageButton.component';
 
 export default function Header(): ReactElement {
   return (
@@ -17,48 +18,24 @@ export default function Header(): ReactElement {
       <nav className="flex w-full max-w-[1180px] items-center justify-between pr-4 md:pr-2">
         <section className="flex items-center justify-between w-[50vw] max-w-[500px]">
           <Image
-            width={56}
-            height={56}
-            className="brightness-0 invert active:invert-0"
+            width="56px"
+            height="56px"
+            className="brightness-0 invert"
             alt="Smiling Egg Image"
             src="/egg.png"
           />
-          <div className="hidden md:flex md:justify-between gap-7">
+          <nav className="hidden md:flex md:justify-between gap-7">
             {HEADER_NAVIGATION_LABELS.map((item) => (
-              <a
-                href=""
-                className="font-montserrat font-bold text-white cursor-pointer select-none hover:opacity-80"
-                key={item}
-              >
-                {item}
-              </a>
+              <HeaderLink key={item}>{item}</HeaderLink>
             ))}
-          </div>
+          </nav>
         </section>
         <section className="flex gap-10 items-center">
-          <ImageButton
-            src={'/user.png'}
-            className="brightness-0 invert"
-            size="28px"
-            buttonStyle="block md:hidden"
-            alt="User Icon"
-          />
-          <ImageButton
-            src={'/menu.png'}
-            className="brightness-0 invert"
-            size="28px"
-            buttonStyle="block md:hidden"
-            alt="Burger Menu Icon"
-          />
-          <a
-            href=""
-            className="hidden md:block font-montserrat font-bold text-white cursor-pointer select-none hover:opacity-80"
-          >
-            Login
-          </a>
-          <div className="hidden md:block">
-            <Button>JOIN US &#8594;</Button>
-          </div>
+          {HEADER_MOBILE_ICONS.map((item) => (
+            <HeaderImageButton size="28px" {...item} key={item.alt} />
+          ))}
+          <HeaderLink>Login</HeaderLink>
+          <HeaderButton>JOIN US &#8594;</HeaderButton>
         </section>
       </nav>
     </header>

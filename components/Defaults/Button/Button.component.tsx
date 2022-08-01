@@ -1,16 +1,20 @@
 //Types
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { BUTTON_TYPES } from '@app-types/enum';
 
 //Interface for Props
-interface ButtonProps {
+interface ButtonProps extends React.BaseHTMLAttributes<HTMLDivElement> {
   children: string;
   type?: BUTTON_TYPES;
+  buttonStyle?: string;
 }
+
+// Default Component
 
 export default function Button({
   children,
   type = BUTTON_TYPES.CONTAINED,
+  buttonStyle,
 }: ButtonProps): ReactElement {
   return (
     <div
@@ -18,7 +22,7 @@ export default function Button({
         type === BUTTON_TYPES.CONTAINED
           ? 'bg-light-background'
           : 'bg-transparent border border-light-background'
-      } cursor-pointer active:opacity-80`}
+      } cursor-pointer active:opacity-80 ${buttonStyle}`}
     >
       <p
         className={`font-montserrat font-bold ${
@@ -32,3 +36,11 @@ export default function Button({
     </div>
   );
 }
+
+// Styled Components
+
+//Header
+
+export const HeaderButton = ({ children }: { children: string }) => {
+  return <Button buttonStyle="hidden md:block">{children}</Button>;
+};

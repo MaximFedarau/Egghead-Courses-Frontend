@@ -10,6 +10,8 @@ interface ImageButtonProps extends ImageProps {
   buttonStyle?: string;
 }
 
+// Default Component
+
 export default function ImageButton({
   size,
   buttonStyle,
@@ -21,3 +23,15 @@ export default function ImageButton({
     </div>
   );
 }
+
+// Styled Components
+
+export const HeaderImageButton = ({ ...props }: ImageButtonProps) => {
+  return (
+    <ImageButton
+      {...props}
+      className="brightness-0 invert"
+      buttonStyle="block md:hidden"
+    />
+  );
+};
