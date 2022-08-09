@@ -44,3 +44,12 @@ export default function Button({
 export const HeaderButton = ({ children }: { children: string }) => {
   return <Button buttonStyle="hidden md:block">{children}</Button>;
 };
+
+// Greetings
+
+export const GreetingsButton = (props: {
+  children: string;
+  type?: BUTTON_TYPES;
+}) => {
+  return <Button buttonStyle="px-10 py-4 w-[200px]" {...props} />;
+};
