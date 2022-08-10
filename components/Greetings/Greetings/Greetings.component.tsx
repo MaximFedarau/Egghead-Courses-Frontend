@@ -5,7 +5,8 @@ import { ReactElement } from 'react';
 import Head from 'next/head';
 
 //Components
-import MainInfo from '../MainInfo/MainInfo.component';
+import MainInfo from '@components/Greetings/MainInfo/MainInfo.component';
+import AdditionalInfo from '@components/Greetings/AdditionalInfo/AdditionalInfo.component';
 
 export default function Greetings(): ReactElement {
   return (
@@ -13,8 +14,9 @@ export default function Greetings(): ReactElement {
       <Head>
         <title>EggHead Courses</title>
       </Head>
-      <section className="mt-20">
+      <section className="mt-20 bg-dark-background">
         <MainInfo />
+        <AdditionalInfo />
       </section>
     </>
   );

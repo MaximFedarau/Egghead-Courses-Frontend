@@ -32,7 +32,12 @@ export default function Header(): ReactElement {
         </section>
         <section className="flex gap-10 items-center">
           {HEADER_MOBILE_ICONS.map((item) => (
-            <HeaderImageButton size="28px" {...item} key={item.alt} />
+            <HeaderImageButton
+              width="w-7"
+              height="h-7"
+              {...item}
+              key={item.alt}
+            />
           ))}
           <HeaderLink>Login</HeaderLink>
           <HeaderButton>JOIN US &#8594;</HeaderButton>
