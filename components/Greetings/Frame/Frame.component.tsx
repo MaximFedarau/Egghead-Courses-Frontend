@@ -55,7 +55,7 @@ export default function Frame({
 }: FrameProps): ReactElement {
   return (
     <article
-      className={`px-10 max-w-[328px] max-h-[328px] aspect-square justify-center ${CONTENT_STYLE[type].backgroundColor} border rounded-md flex flex-col`}
+      className={`p-10 max-w-[328px] max-h-[328px] aspect-square justify-center ${CONTENT_STYLE[type].backgroundColor} border rounded-md flex flex-col`}
     >
       <section
         className={`w-[70px] h-[76px] rounded-md flex justify-center items-center ${ICON_STYLE[iconType].backgroundColor}`}
