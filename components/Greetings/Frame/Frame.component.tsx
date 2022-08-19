@@ -29,6 +29,7 @@ const CONTENT_STYLE: {
     backgroundColor: string;
     titleColor: string;
     lineColor: string;
+    lineBackground: string;
     secondaryTextColor: string;
   };
 } = {
@@ -36,12 +37,14 @@ const CONTENT_STYLE: {
     backgroundColor: 'bg-light-background',
     titleColor: 'text-white',
     lineColor: 'text-white',
+    lineBackground: 'bg-white',
     secondaryTextColor: 'text-white',
   },
   [STYLE_TYPES.OUTLINED]: {
     backgroundColor: 'bg-white',
     titleColor: 'text-black',
     lineColor: 'text-danger',
+    lineBackground: 'bg-danger',
     secondaryTextColor: 'text-secondary',
   },
 };
@@ -63,11 +66,13 @@ export default function Frame({
         <Icon className={`w-8 h-8 ${ICON_STYLE[iconType].color}`} />
       </section>
       <p
-        className={`my-5 font-bold text-base ${CONTENT_STYLE[type].titleColor}`}
+        className={`my-5 font-bold text-base select-none ${CONTENT_STYLE[type].titleColor}`}
       >
         {title}
       </p>
-      <div className={`border w-14 mb-5 ${CONTENT_STYLE[type].lineColor}`} />
+      <div
+        className={`border w-14 mb-5 ${CONTENT_STYLE[type].lineColor} ${CONTENT_STYLE[type].lineBackground}`}
+      />
       <p className={`text-sm ${CONTENT_STYLE[type].secondaryTextColor}`}>
         {children}
       </p>

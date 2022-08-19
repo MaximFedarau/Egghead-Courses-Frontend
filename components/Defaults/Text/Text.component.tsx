@@ -8,7 +8,7 @@ export const NavigationLink = (
   return (
     <a
       {...props}
-      className={`font-montserrat font-bold text-white cursor-pointer select-none hover:opacity-80 ${props.className}`}
+      className={`font-montserrat font-bold text-white cursor-pointer select-none active:opacity-80 ${props.className}`}
     />
   );
 };

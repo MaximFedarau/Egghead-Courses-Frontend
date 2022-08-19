@@ -20,9 +20,9 @@ export default function ImageButton({
   ...props
 }: ImageButtonProps): ReactElement {
   return (
-    <div className={`${width} ${height} active:opacity-80 ${buttonStyle}`}>
+    <button className={`${width} ${height} active:opacity-80 ${buttonStyle}`}>
       <Image width="100%" height="100%" {...props} />
-    </div>
+    </button>
   );
 }
 

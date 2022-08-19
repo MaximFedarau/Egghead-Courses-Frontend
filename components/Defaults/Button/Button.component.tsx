@@ -34,7 +34,7 @@ export default function Button({
   buttonStyle,
 }: ButtonProps): ReactElement {
   return (
-    <div
+    <button
       className={`flex items-center justify-center rounded px-6 py-3 ${BUTTON_STYLE[type].background} cursor-pointer active:opacity-80 ${buttonStyle}`}
     >
       <p
@@ -42,7 +42,7 @@ export default function Button({
       >
         {children}
       </p>
-    </div>
+    </button>
   );
 }
 

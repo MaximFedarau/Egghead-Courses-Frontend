@@ -14,7 +14,7 @@ export default function Greetings(): ReactElement {
       <Head>
         <title>EggHead Courses</title>
       </Head>
-      <section className="mt-20 bg-dark-background">
+      <section className="pt-20 bg-dark-background">
         <MainInfo />
         <AdditionalInfo />
       </section>

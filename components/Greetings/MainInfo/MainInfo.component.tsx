@@ -7,7 +7,7 @@ import { GreetingsButton } from '@components/Defaults/Button/Button.component';
 
 export default function MainInfo(): ReactElement {
   return (
-    <section className="flex p-greetings flex-col justify-center items-center">
+    <section className="flex py-greetings flex-col justify-center items-center">
       <p className="text-white font-bold text-center max-w-[602px] text-7xl leading-[80px] px-2">
         Selling on the internet like a pro
       </p>
