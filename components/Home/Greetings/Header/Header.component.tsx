@@ -14,8 +14,8 @@ import { HeaderImageButton } from '@components/Defaults/ImageButton/ImageButton.
 
 export default function Header(): ReactElement {
   return (
-    <header className="fixed top-0 flex z-20 items-center md:justify-center bg-dark-background/[.85] w-full h-24 px-1 backdrop-blur-2xl">
-      <nav className="flex w-full max-w-[1180px] items-center justify-between pr-2">
+    <header className="fixed top-0 z-20 flex items-center md:justify-center w-full h-24 px-1 bg-dark-background/[.85] backdrop-blur-2xl">
+      <nav className="flex items-center justify-between w-full max-w-[1180px] pr-2">
         <section className="flex items-center justify-between w-[50vw] max-w-[500px]">
           <Image
             width="56px"
@@ -30,7 +30,7 @@ export default function Header(): ReactElement {
             ))}
           </nav>
         </section>
-        <section className="flex gap-10 items-center">
+        <section className="flex items-center gap-10">
           {HEADER_MOBILE_ICONS.map((item) => (
             <HeaderImageButton
               width="w-7"

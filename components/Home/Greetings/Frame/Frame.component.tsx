@@ -58,10 +58,10 @@ export default function Frame({
 }: FrameProps): ReactElement {
   return (
     <article
-      className={`p-10 max-w-[328px] max-h-[328px] aspect-square justify-center ${CONTENT_STYLE[type].backgroundColor} border rounded-md flex flex-col`}
+      className={`flex flex-col justify-center max-w-[328px] max-h-[328px] p-10 border rounded-md aspect-square ${CONTENT_STYLE[type].backgroundColor}`}
     >
       <section
-        className={`w-[70px] h-[76px] rounded-md flex justify-center items-center ${ICON_STYLE[iconType].backgroundColor}`}
+        className={`flex justify-center items-center w-[70px] h-[76px] rounded-md ${ICON_STYLE[iconType].backgroundColor}`}
       >
         <Icon className={`w-8 h-8 ${ICON_STYLE[iconType].color}`} />
       </section>
@@ -71,7 +71,7 @@ export default function Frame({
         {title}
       </p>
       <div
-        className={`border w-14 mb-5 ${CONTENT_STYLE[type].lineColor} ${CONTENT_STYLE[type].lineBackground}`}
+        className={`w-14 mb-5 border ${CONTENT_STYLE[type].lineBackground} ${CONTENT_STYLE[type].lineColor}`}
       />
       <p className={`text-sm ${CONTENT_STYLE[type].secondaryTextColor}`}>
         {children}

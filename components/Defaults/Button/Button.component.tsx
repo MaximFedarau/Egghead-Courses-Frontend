@@ -35,10 +35,10 @@ export default function Button({
 }: ButtonProps): ReactElement {
   return (
     <button
-      className={`flex items-center justify-center rounded px-6 py-3 ${BUTTON_STYLE[type].background} cursor-pointer active:opacity-80 ${buttonStyle}`}
+      className={`flex items-center justify-center px-6 py-3 rounded cursor-pointer active:opacity-80 ${BUTTON_STYLE[type].background} ${buttonStyle}`}
     >
       <p
-        className={`font-montserrat font-bold ${BUTTON_STYLE[type].color} select-none`}
+        className={`font-montserrat font-bold select-none ${BUTTON_STYLE[type].color}`}
       >
         {children}
       </p>
@@ -60,5 +60,5 @@ export const GreetingsButton = (props: {
   children: string;
   type?: STYLE_TYPES;
 }) => {
-  return <Button buttonStyle="px-10 py-4 w-[200px]" {...props} />;
+  return <Button buttonStyle="w-[200px] px-10 py-4" {...props} />;
 };
