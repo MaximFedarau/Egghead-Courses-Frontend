@@ -9,8 +9,8 @@ export default function GeneralDescription(): ReactElement {
   return (
     <section className="flex justify-center w-screen my-4 lg:my-0 py-greetings bg-white">
       <section className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 w-full max-w-[1680px] px-[3vw]">
-        <article className="flex flex-col justify-between items-center lg:items-stretch lg:self-center h-[248px] lg:h-[296px] lg:mt-0 ">
-          <div className="hidden lg:block w-full lg:w-24 border-4 bg-danger text-danger" />
+        <article className="flex flex-col justify-between items-center lg:items-stretch gap-4 lg:gap-0 lg:h-[296px] lg:mt-0 ">
+          <div className="hidden lg:block w-full lg:w-24 mb-3 border-4 bg-danger text-danger" />
           <p className="max-w-[440px] lg:ml-1 font-montserrat font-bold text-center lg:text-left text-4xl text-dark-background uppercase select-none ">
             Packages that are aprodable
           </p>
