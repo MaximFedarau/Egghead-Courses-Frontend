@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import { GREETINGS_FRAMES } from '@constants/data';
 
 //Components
-import Frame from '@components/Greetings/Frame/Frame.component';
+import Frame from '@components/Home/Greetings/Frame/Frame.component';
 
 export default function AdditionalInfo(): ReactElement {
   return (

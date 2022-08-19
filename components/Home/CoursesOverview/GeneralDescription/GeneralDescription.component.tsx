@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import NextImage from 'next/image';
 import { IoChevronForwardOutline } from 'react-icons/io5';
 
-export default function CoursesOverview(): ReactElement {
+export default function GeneralDescription(): ReactElement {
   return (
     <section className="flex my-4 lg:my-0 py-greetings w-screen justify-center bg-white">
       <section className="flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between items-center lg:items-stretch w-full max-w-[1680px] px-[2vw]">
