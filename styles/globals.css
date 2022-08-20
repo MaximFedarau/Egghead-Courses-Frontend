@@ -16,4 +16,10 @@ body {
   }
 }
 
+@layer components {
+  .panel-icon {
+    @apply h-10 w-10 p-2 rounded-3xl bg-white active:opacity-90 cursor-pointer;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');

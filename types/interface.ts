@@ -10,3 +10,15 @@ export interface FrameProps {
   Icon: IconType;
   iconType?: FRAME_ICON_TYPES;
 }
+
+// Courses Overview Panel Props
+export interface PanelProps {
+  image: string;
+}
+
+// Panel Icon component Props
+export interface PanelIconProps {
+  IconOutlined: IconType;
+  IconFilled: IconType;
+  color: string;
+}
