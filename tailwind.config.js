@@ -13,7 +13,11 @@ module.exports = {
       'white': '#ffffff',
       'black': '#000000',
       'danger': '#e53e3e',
-      'secondary': '#737373'
+      'success': '#40BB15',
+      'alert': '#E77C40',
+      'secondary': '#737373',
+      'panel-star': '#FFCE31',
+      'panel-price': '#BDBDBD', 
     },
     fontFamily: {
       'sans': ['Inter var', 'sans-serif'],
