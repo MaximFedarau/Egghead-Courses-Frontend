@@ -5,7 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'panel-icons-smooth': {
+          // using colors instead of opacity, because opacity causes bugs in Safari with react-icons
+          '0%': { backgroundColor: 'transparent', color: 'transparent' },
+          '100%': { backgroundColor: 'white', color: 'black' },
+        }
+      }
+    },
     colors: {
       'transparent': 'transparent',
       'dark-background': "#252B42",
@@ -66,6 +74,18 @@ module.exports = {
       '56': '14rem',
       '64': '16rem',
       'greetings': 'min(11%, 200px)'
+    },
+    animation: {
+      'panel-icons-smooth': 'panel-icons-smooth 0.5s ease-in-out',
+      'spin': 'spin 1s linear infinite',
+      'ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
+      'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'bounce': 'bounce 1s infinite',
+      'fade-in': 'fade-in 1s ease-in-out',
+      'fade-out': 'fade-out 1s ease-in-out',
+      'fade-in-out': 'fade-in-out 1s ease-in-out',
+      'slide-in': 'slide-in 1s ease-in-out',
+      'slide-out': 'slide-out 1s ease-in-out',
     }
   },
   plugins: [],

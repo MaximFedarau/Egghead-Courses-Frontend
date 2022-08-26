@@ -12,14 +12,14 @@ export default function PanelIcon({
     setIsFilled(!isFilled);
   };
   return (
-    <section className="">
+    <section
+      className="flex justify-center items-center h-10 w-10 opacity-80 animate-panel-icons-smooth panel-icon"
+      onClick={onClickHandler}
+    >
       {isFilled ? (
-        <IconFilled
-          className={`panel-icon ${color}`}
-          onClick={onClickHandler}
-        />
+        <IconFilled className={`h-full w-full ${color}`} />
       ) : (
-        <IconOutlined className="panel-icon" onClick={onClickHandler} />
+        <IconOutlined className="h-full w-full" />
       )}
     </section>
   );

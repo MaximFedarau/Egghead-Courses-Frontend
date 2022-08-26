@@ -17,6 +17,18 @@ body {
 }
 
 @layer components {
+  .header-link {
+    @apply hidden md:block font-montserrat font-bold text-white cursor-pointer select-none active:opacity-80
+  }
+  .section-stripe {
+    @apply hidden lg:block w-full lg:w-24 mb-3 border-4
+  }
+  .section-title {
+    @apply font-montserrat font-bold text-center lg:text-left text-4xl text-dark-background uppercase select-none 
+  }
+  .section-description {
+    @apply max-w-[352px] lg:max-w-none text-center lg:text-left text-sm text-secondary
+  }
   .panel-icon {
     @apply h-10 w-10 p-2 rounded-3xl bg-white opacity-80 active:opacity-75 cursor-pointer;
   }

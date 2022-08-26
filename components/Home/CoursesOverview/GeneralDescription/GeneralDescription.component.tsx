@@ -3,27 +3,25 @@ import { ReactElement } from 'react';
 
 //Next
 import NextImage from 'next/image';
-import { IoChevronForwardOutline } from 'react-icons/io5';
+
+//Components
+import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 export default function GeneralDescription(): ReactElement {
   return (
     <section className="flex justify-center w-screen my-4 lg:my-0 py-greetings bg-white">
       <section className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 w-full max-w-[1680px] px-[3vw]">
-        <article className="flex flex-col justify-between items-center lg:items-stretch self-center gap-4 lg:gap-0 lg:h-[296px] lg:mt-0 ">
-          <div className="hidden lg:block w-full lg:w-24 mb-3 border-4 bg-danger text-danger" />
-          <p className="max-w-[440px] lg:ml-1 font-montserrat font-bold text-center lg:text-left text-4xl text-dark-background uppercase select-none ">
+        <article className="flex flex-col justify-between items-center lg:items-stretch self-center gap-4 lg:gap-0 lg:h-[296px] [&>:not(:first-child)]:lg:ml-1">
+          <div className="bg-danger text-danger section-stripe" />
+          <p className="max-w-[440px] section-title">
             Packages that are aprodable
           </p>
-          <p className="max-w-[352px] lg:ml-1 text-center lg:text-left text-sm text-secondary">
-            Problems trying to resolve the conflict between the two major realms
-            of Classical physics: Newtonian mechanics{' '}
+          <p className="section-description">
+            Problems trying to resolve the conflict between{' '}
+            <br className="hidden lg:block" /> the two major realms of Classical
+            physics: <br className="hidden lg:block" /> Newtonian mechanics{' '}
           </p>
-          <button className="flex flex-row items-center h-fit w-fit lg:ml-1 cursor-pointer select-none active:opacity-80">
-            <p className="font-bold text-sm text-light-background">
-              Learn more
-            </p>
-            <IoChevronForwardOutline className=" h-7 w-7 text-light-background" />
-          </button>
+          <LearnMoreButton />
         </article>
         <article className="w-fit h-fit">
           <NextImage src="/kids.png" width="513px" height="395px" alt="Kids" />

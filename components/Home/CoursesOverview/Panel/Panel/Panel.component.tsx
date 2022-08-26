@@ -1,6 +1,7 @@
 //Types
 import React, { ReactElement } from 'react';
 import { PanelProps } from '@app-types/interface';
+import { STYLE_TYPES } from '@app-types/enum';
 
 //Constants
 import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from '@constants/data';
@@ -10,10 +11,11 @@ import NextImage from 'next/image';
 
 //Components
 import PanelIcon from '@components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
+import CurriculumItem from '@components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
+import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 //Icons
-import { IoStar, IoDownload, IoChevronForwardOutline } from 'react-icons/io5';
-import CurriculumItem from '@components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
+import { IoStar, IoDownload } from 'react-icons/io5';
 
 export default function Panel({ image }: PanelProps): ReactElement {
   const [showActions, setShowActions] = React.useState(false);
@@ -76,14 +78,11 @@ export default function Panel({ image }: PanelProps): ReactElement {
               <CurriculumItem key={props.children} {...props} />
             ))}
           </section>
-          <button className="flex flex-row items-center self-center xl:self-start h-fit w-fit px-5 py-2 border border-light-background rounded-3xl active:bg-light-background/5 cursor-pointer select-none">
-            <p className="font-bold text-sm text-light-background">
-              Learn more
-            </p>
-            <IoChevronForwardOutline className=" h-7 w-7 text-light-background" />
-          </button>
+          <LearnMoreButton>{STYLE_TYPES.OUTLINED}</LearnMoreButton>
         </section>
       </section>
     </article>
   );
 }
+
+//absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full

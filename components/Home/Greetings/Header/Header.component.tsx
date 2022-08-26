@@ -9,7 +9,6 @@ import Image from 'next/image';
 
 //Components
 import { HeaderButton } from '@components/Defaults/Button/Button.component';
-import { HeaderLink } from '@components/Defaults/Text/Text.component';
 import { HeaderImageButton } from '@components/Defaults/ImageButton/ImageButton.component';
 
 export default function Header(): ReactElement {
@@ -26,7 +25,9 @@ export default function Header(): ReactElement {
           />
           <nav className="hidden md:flex md:justify-between gap-7">
             {HEADER_NAVIGATION_LABELS.map((item) => (
-              <HeaderLink key={item}>{item}</HeaderLink>
+              <a className="header-link" key={item}>
+                {item}
+              </a>
             ))}
           </nav>
         </section>
@@ -39,7 +40,7 @@ export default function Header(): ReactElement {
               key={item.alt}
             />
           ))}
-          <HeaderLink>Login</HeaderLink>
+          <a className="header-link">Login</a>
           <HeaderButton>JOIN US &#8594;</HeaderButton>
         </section>
       </nav>

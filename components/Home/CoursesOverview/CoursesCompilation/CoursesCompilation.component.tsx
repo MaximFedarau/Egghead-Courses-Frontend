@@ -11,18 +11,18 @@ export default function CoursesCompilation(): ReactElement {
   return (
     <section className="flex justify-center w-screen py-greetings bg-white">
       <section className="flex flex-col w-full max-w-[1680px] px-[3vw] ">
-        <article className="flex flex-col justify-between items-center lg:items-stretch gap-4">
-          <div className="hidden lg:block w-full lg:w-24 mb-3 border-4 bg-light-background text-light-background" />
-          <p className="lg:ml-1 font-montserrat font-bold text-center lg:text-left text-4xl text-dark-background uppercase select-none ">
+        <article className="flex flex-col justify-between items-center lg:items-stretch gap-4 [&>:not(:first-child)]:lg:ml-1">
+          <div className="bg-light-background text-light-background section-stripe" />
+          <p className="section-title">
             Make online <br className="block lg:hidden" /> education accessible
           </p>
-          <p className="max-w-[352px] lg:max-w-none lg:ml-1 text-center lg:text-left text-sm text-secondary">
+          <p className="section-description">
             Problems trying to resolve the conflict between{' '}
             <br className="hidden lg:block" /> the two major realms of Classical
             physics: Newtonian mechanics
           </p>
         </article>
-        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-y-8 w-full max-w-[1680px] pt-16 xl:pt-24">
+        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-y-8 w-full max-w-[1680px] pt-12 lg:pt-16">
           {COURSES_OVERVIEW_PANELS.map((props) => (
             <Panel key={props.image} {...props} />
           ))}
