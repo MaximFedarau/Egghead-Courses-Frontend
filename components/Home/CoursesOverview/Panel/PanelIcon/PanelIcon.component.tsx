@@ -12,7 +12,7 @@ export default function PanelIcon({
     setIsFilled(!isFilled);
   };
   return (
-    <>
+    <section className="">
       {isFilled ? (
         <IconFilled
           className={`panel-icon ${color}`}
@@ -21,6 +21,6 @@ export default function PanelIcon({
       ) : (
         <IconOutlined className="panel-icon" onClick={onClickHandler} />
       )}
-    </>
+    </section>
   );
 }

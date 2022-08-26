@@ -22,3 +22,10 @@ export interface PanelIconProps {
   IconFilled: IconType;
   color: string;
 }
+
+// Panel Curriculum Item Props
+export interface CurriculumItemProps {
+  children: string;
+  icon: IconType;
+  color: string;
+}

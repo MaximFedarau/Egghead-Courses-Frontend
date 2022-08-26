@@ -18,7 +18,7 @@ body {
 
 @layer components {
   .panel-icon {
-    @apply h-10 w-10 p-2 rounded-3xl bg-white active:opacity-90 cursor-pointer;
+    @apply h-10 w-10 p-2 rounded-3xl bg-white opacity-80 active:opacity-75 cursor-pointer;
   }
 }
 

@@ -1,5 +1,10 @@
 //Types
-import { FrameProps, PanelProps, PanelIconProps } from '@app-types/interface';
+import {
+  FrameProps,
+  PanelProps,
+  PanelIconProps,
+  CurriculumItemProps,
+} from '@app-types/interface';
 import { FRAME_ICON_TYPES, STYLE_TYPES } from '@app-types/enum';
 
 //Icons
@@ -13,6 +18,8 @@ import {
   IoCart,
   IoEyeOutline,
   IoEye,
+  IoAlarm,
+  IoBarChart,
 } from 'react-icons/io5';
 
 //Header Navigation Labels
@@ -97,5 +104,25 @@ export const PANEL_ICONS: PanelIconProps[] = [
     IconOutlined: IoEyeOutline,
     IconFilled: IoEye,
     color: 'text-black',
+  },
+];
+
+// Panel Curriculum Info
+
+export const PANEL_CURRICULUM_INFO: CurriculumItemProps[] = [
+  {
+    children: 'Professional',
+    icon: IoAlarm,
+    color: 'text-light-background',
+  },
+  {
+    children: '64 Lessons',
+    icon: IoBarChart,
+    color: 'text-alert',
+  },
+  {
+    children: '22 hours',
+    icon: IoAlarm,
+    color: 'text-light-background',
   },
 ];
