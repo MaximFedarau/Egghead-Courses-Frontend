@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Components
-import Header from '@components/Home/Greetings/Header/Header.component';
+import Header from '@components/MainLayout/Header/Header.component';
 
 export default function MainLayout({ children }: { children: ReactElement }) {
   return (
