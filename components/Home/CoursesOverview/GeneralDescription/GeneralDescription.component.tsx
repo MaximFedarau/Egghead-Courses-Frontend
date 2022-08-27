@@ -24,7 +24,12 @@ export default function GeneralDescription(): ReactElement {
           <LearnMoreButton />
         </article>
         <article className="w-fit h-fit">
-          <NextImage src="/kids.png" width="513px" height="395px" alt="Kids" />
+          <NextImage
+            src="/images/courses-overview/description/kids.png"
+            width="513px"
+            height="395px"
+            alt="Kids"
+          />
         </article>
       </section>
     </section>

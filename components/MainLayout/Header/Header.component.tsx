@@ -21,7 +21,7 @@ export default function Header(): ReactElement {
             height="56px"
             className="brightness-0 invert"
             alt="Smiling Egg Image"
-            src="/egg.png"
+            src="/icons/egg.png"
           />
           <nav className="hidden md:flex md:justify-between gap-7">
             {HEADER_NAVIGATION_LABELS.map((item) => (

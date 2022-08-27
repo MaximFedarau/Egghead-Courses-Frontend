@@ -37,11 +37,11 @@ export const HEADER_MOBILE_ICONS: {
 }[] = [
   {
     alt: 'Person Icon',
-    src: '/user.png',
+    src: '/icons/user.png',
   },
   {
     alt: 'Burger Menu Icon',
-    src: '/menu.png',
+    src: '/icons/menu.png',
   },
 ];
 
@@ -75,16 +75,16 @@ export const GREETINGS_FRAMES: FrameProps[] = [
 
 export const COURSES_OVERVIEW_PANELS: PanelProps[] = [
   {
-    image: '/courses/plan.png',
+    image: '/images/courses-overview/courses/plan.png',
   },
   {
-    image: '/courses/lady.png',
+    image: '/images/courses-overview/courses/lady.png',
   },
   {
-    image: '/courses/lightbulb.png',
+    image: '/images/courses-overview/courses/lightbulb.png',
   },
   {
-    image: '/courses/pencils.png',
+    image: '/images/courses-overview/courses/pencils.png',
   },
 ];
 
