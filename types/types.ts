@@ -1,0 +1,14 @@
+//Types
+import { CONTENT_TYPES } from './enum';
+
+// Base Content Types
+export type BASE_CONTENT_TYPES =
+  | CONTENT_TYPES.INFO
+  | CONTENT_TYPES.SUCCESS
+  | CONTENT_TYPES.ERROR;
+
+// Panel Icons Types
+export type PANEL_ICON_TYPES =
+  | CONTENT_TYPES.INFO
+  | CONTENT_TYPES.ERROR
+  | CONTENT_TYPES.DEFAULT;

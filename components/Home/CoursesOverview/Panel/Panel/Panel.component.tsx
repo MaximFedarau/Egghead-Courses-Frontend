@@ -43,7 +43,7 @@ export default function Panel({ image }: PanelProps): ReactElement {
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
             {PANEL_ICONS.map((props) => (
-              <PanelIcon key={props.color} {...props} />
+              <PanelIcon key={props.type} {...props} />
             ))}
           </section>
         )}

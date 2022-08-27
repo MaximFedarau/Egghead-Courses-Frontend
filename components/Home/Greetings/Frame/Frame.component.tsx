@@ -1,24 +1,25 @@
 //Types
 import { ReactElement } from 'react';
-import { STYLE_TYPES, FRAME_ICON_TYPES } from '@app-types/enum';
+import { STYLE_TYPES, CONTENT_TYPES } from '@app-types/enum';
+import { BASE_CONTENT_TYPES } from '@app-types/types';
 import { FrameProps } from '@app-types/interface';
 
-// Styles depending on type
+// Styles depending on the type
 const ICON_STYLE: {
-  [key in FRAME_ICON_TYPES]: {
+  [key in BASE_CONTENT_TYPES]: {
     backgroundColor: string;
     color: string;
   };
 } = {
-  [FRAME_ICON_TYPES.INFO]: {
+  [CONTENT_TYPES.INFO]: {
     backgroundColor: 'bg-[#fff]',
-    color: 'text-[#23A6F0]',
+    color: 'text-light-background',
   },
-  [FRAME_ICON_TYPES.SUCCESS]: {
+  [CONTENT_TYPES.SUCCESS]: {
     backgroundColor: 'bg-[#b9eaa7]',
-    color: 'text-[#31c173]',
+    color: 'text-success',
   },
-  [FRAME_ICON_TYPES.ERROR]: {
+  [CONTENT_TYPES.ERROR]: {
     backgroundColor: 'bg-[#f5c6cb]',
     color: 'text-danger',
   },
@@ -53,7 +54,7 @@ export default function Frame({
   children,
   title,
   type = STYLE_TYPES.OUTLINED,
-  iconType = FRAME_ICON_TYPES.INFO,
+  iconType = CONTENT_TYPES.INFO,
   Icon,
 }: FrameProps): ReactElement {
   return (

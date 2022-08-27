@@ -5,7 +5,7 @@ import {
   PanelIconProps,
   CurriculumItemProps,
 } from '@app-types/interface';
-import { FRAME_ICON_TYPES, STYLE_TYPES } from '@app-types/enum';
+import { CONTENT_TYPES, STYLE_TYPES } from '@app-types/enum';
 
 //Icons
 import {
@@ -50,14 +50,14 @@ export const HEADER_MOBILE_ICONS: {
 export const GREETINGS_FRAMES: FrameProps[] = [
   {
     Icon: IoSadOutline,
-    iconType: FRAME_ICON_TYPES.ERROR,
+    iconType: CONTENT_TYPES.ERROR,
     title: 'Not enough knowledge?',
     children:
       'The gradual accumulation of information about atomic and small-scale behaviour...',
   },
   {
     Icon: IoCheckmarkDone,
-    iconType: FRAME_ICON_TYPES.SUCCESS,
+    iconType: CONTENT_TYPES.SUCCESS,
     title: 'Find your dream job!',
     children:
       'The gradual accumulation of information about atomic and small-scale behaviour...',
@@ -93,17 +93,17 @@ export const PANEL_ICONS: PanelIconProps[] = [
   {
     IconOutlined: IoHeartOutline,
     IconFilled: IoHeart,
-    color: 'text-danger',
+    type: CONTENT_TYPES.ERROR,
   },
   {
     IconOutlined: IoCartOutline,
     IconFilled: IoCart,
-    color: 'text-light-background',
+    type: CONTENT_TYPES.INFO,
   },
   {
     IconOutlined: IoEyeOutline,
     IconFilled: IoEye,
-    color: 'text-black',
+    type: CONTENT_TYPES.DEFAULT,
   },
 ];
 
@@ -113,16 +113,16 @@ export const PANEL_CURRICULUM_INFO: CurriculumItemProps[] = [
   {
     children: 'Professional',
     icon: IoAlarm,
-    color: 'text-light-background',
+    type: CONTENT_TYPES.INFO,
   },
   {
     children: '64 Lessons',
     icon: IoBarChart,
-    color: 'text-alert',
+    type: CONTENT_TYPES.ALERT,
   },
   {
     children: '22 hours',
     icon: IoAlarm,
-    color: 'text-light-background',
+    type: CONTENT_TYPES.INFO,
   },
 ];

@@ -4,9 +4,11 @@ export enum STYLE_TYPES {
   'OUTLINED' = 'outlined',
 }
 
-// Greetings Frame Types
-export enum FRAME_ICON_TYPES {
+// Content Types
+export enum CONTENT_TYPES {
   'INFO' = 'info',
+  'ALERT' = 'alert',
   'SUCCESS' = 'success',
   'ERROR' = 'error',
+  'DEFAULT' = 'default',
 }
