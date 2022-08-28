@@ -29,6 +29,8 @@ export default function GeneralDescription(): ReactElement {
             width="513px"
             height="395px"
             alt="Kids"
+            placeholder="blur"
+            blurDataURL="/images/reusables/placeholder.png"
           />
         </article>
       </section>
