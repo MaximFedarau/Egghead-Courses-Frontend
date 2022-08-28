@@ -40,7 +40,7 @@ export default function Panel({ image }: PanelProps): ReactElement {
           className="rounded-md"
           alt="Course Image"
           placeholder="blur"
-          blurDataURL="/images/reusables/placeholder.png"
+          blurDataURL="/images/reusables/placeholder-medium.png"
         />
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
