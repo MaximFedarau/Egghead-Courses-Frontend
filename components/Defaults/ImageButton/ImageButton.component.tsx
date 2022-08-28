@@ -20,20 +20,8 @@ export default function ImageButton({
   ...props
 }: ImageButtonProps): ReactElement {
   return (
-    <div className={`${width} ${height} active:opacity-80 ${buttonStyle}`}>
+    <button className={`active:opacity-80 ${width} ${height} ${buttonStyle}`}>
       <Image width="100%" height="100%" {...props} />
-    </div>
+    </button>
   );
 }
-
-// Styled Components
-
-export const HeaderImageButton = ({ ...props }: ImageButtonProps) => {
-  return (
-    <ImageButton
-      {...props}
-      className="brightness-0 invert"
-      buttonStyle="block md:hidden"
-    />
-  );
-};

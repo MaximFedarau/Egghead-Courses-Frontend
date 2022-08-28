@@ -20,7 +20,7 @@
       "@constants/*": ["./constants/*"],
       "@pages/*": ["./pages/*"],
       "@app-types/*": ["./types/*"],
-      "@utils/*": ["./utils/*"],
+      "@utils/*": ["./utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

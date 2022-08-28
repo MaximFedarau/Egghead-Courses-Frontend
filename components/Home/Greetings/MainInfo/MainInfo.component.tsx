@@ -7,11 +7,11 @@ import { GreetingsButton } from '@components/Defaults/Button/Button.component';
 
 export default function MainInfo(): ReactElement {
   return (
-    <section className="flex p-greetings flex-col justify-center items-center">
-      <p className="text-white font-bold text-center max-w-[602px] text-7xl leading-[80px] px-2">
+    <section className="flex flex-col justify-center items-center pt-greetings lg:py-greetings">
+      <p className="max-w-[602px] px-2 font-bold text-white text-center text-7xl leading-[80px] select-none">
         Selling on the internet like a pro
       </p>
-      <p className="text-white text-center max-w-[536px] text-xl leading-[32px] px-2 my-[36px]">
+      <p className="max-w-[536px] my-9 px-2 text-white text-center text-xl leading-8">
         We know how large objects will act, but things on a small scale just do
         not act that way.
       </p>
