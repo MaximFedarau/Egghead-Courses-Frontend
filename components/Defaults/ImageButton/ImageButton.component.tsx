@@ -25,15 +25,3 @@ export default function ImageButton({
     </button>
   );
 }
-
-// Styled Components
-
-export const HeaderImageButton = ({ ...props }: ImageButtonProps) => {
-  return (
-    <ImageButton
-      {...props}
-      className="brightness-0 invert"
-      buttonStyle="md:hidden block"
-    />
-  );
-};

@@ -5,7 +5,7 @@ import {
   PanelIconProps,
   CurriculumItemProps,
 } from '@app-types/interface';
-import { CONTENT_TYPES, STYLE_TYPES } from '@app-types/enum';
+import { CONTENT_TYPES, STYLE_TYPES, CONTENT_SIZES } from '@app-types/enum';
 
 //Icons
 import {
@@ -20,7 +20,10 @@ import {
   IoEye,
   IoAlarm,
   IoBarChart,
+  IoPerson,
+  IoMenu,
 } from 'react-icons/io5';
+import { IconType } from 'react-icons';
 
 //Header Navigation Labels
 export const HEADER_NAVIGATION_LABELS = [
@@ -33,15 +36,18 @@ export const HEADER_NAVIGATION_LABELS = [
 // Header Mobile Icons
 export const HEADER_MOBILE_ICONS: {
   alt: string;
-  src: string;
+  Icon: IconType;
+  size: Exclude<CONTENT_SIZES, CONTENT_SIZES.SMALL>;
 }[] = [
   {
     alt: 'Person Icon',
-    src: '/icons/user.png',
+    Icon: IoPerson,
+    size: CONTENT_SIZES.MEDIUM,
   },
   {
     alt: 'Burger Menu Icon',
-    src: '/icons/menu.png',
+    Icon: IoMenu,
+    size: CONTENT_SIZES.LARGE,
   },
 ];
 
