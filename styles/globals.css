@@ -16,10 +16,31 @@ body {
   }
 }
 
+/* * reason: all (paddings, margins and etc.) looks better */
+body {
+  min-width: 320px;
+}
+
 @layer components {
+  /* * header styles */
+
   .header-link {
     @apply hidden md:block font-montserrat font-bold text-white cursor-pointer select-none active:opacity-80
   }
+  /* * section (blocks) styles*/
+
+  /* * views */
+  .section-container {
+    @apply flex justify-center w-full py-greetings bg-white
+  }
+  .section-content {
+    @apply flex flex-col w-full max-w-[1680px] px-[3vw]
+  }
+  .section-header {
+    @apply flex flex-col justify-between items-center lg:items-stretch gap-4 [&>:not(:first-child)]:lg:ml-1
+  }
+
+  /* * elements */
   .section-stripe {
     @apply hidden lg:block w-full lg:w-24 mb-3 border-4
   }

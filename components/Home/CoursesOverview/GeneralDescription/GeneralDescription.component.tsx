@@ -9,9 +9,9 @@ import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/Le
 
 export default function GeneralDescription(): ReactElement {
   return (
-    <section className="flex justify-center w-screen my-4 lg:my-0 py-greetings bg-white">
-      <section className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 w-full max-w-[1680px] px-[3vw]">
-        <article className="flex flex-col justify-between items-center lg:items-stretch self-center gap-4 lg:gap-0 lg:h-[296px] [&>:not(:first-child)]:lg:ml-1">
+    <section className="my-4 lg:my-0 section-container">
+      <section className="lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 section-content">
+        <header className="self-center lg:gap-0 lg:h-[296px] section-header">
           <div className="bg-danger text-danger section-stripe" />
           <p className="max-w-[440px] section-title">
             Packages that are aprodable
@@ -22,7 +22,7 @@ export default function GeneralDescription(): ReactElement {
             physics: <br className="hidden lg:block" /> Newtonian mechanics{' '}
           </p>
           <LearnMoreButton />
-        </article>
+        </header>
         <article className="w-fit h-fit">
           <NextImage
             src="/images/courses-overview/description/kids.png"
