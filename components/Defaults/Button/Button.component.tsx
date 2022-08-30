@@ -1,6 +1,6 @@
 //Types
 import React, { ReactElement } from 'react';
-import { STYLE_TYPES } from '@app-types/enum';
+import { STYLE_TYPES } from 'types/enum';
 
 //Interface for Props
 interface ButtonProps extends React.BaseHTMLAttributes<HTMLDivElement> {

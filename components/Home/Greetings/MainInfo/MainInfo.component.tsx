@@ -1,9 +1,9 @@
 //Types
 import { ReactElement } from 'react';
-import { STYLE_TYPES } from '@app-types/enum';
+import { STYLE_TYPES } from 'types/enum';
 
 //Components
-import { GreetingsButton } from '@components/Defaults/Button/Button.component';
+import { GreetingsButton } from 'components/Defaults/Button/Button.component';
 
 export default function MainInfo(): ReactElement {
   return (

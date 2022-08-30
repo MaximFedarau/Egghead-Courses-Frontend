@@ -1,15 +1,15 @@
 //Types
 import { ReactElement } from 'react';
-import { CONTENT_SIZES } from '@app-types/enum';
+import { CONTENT_SIZES } from 'types/enum';
 
 //Constants
-import { HEADER_NAVIGATION_LABELS, HEADER_MOBILE_ICONS } from '@constants/data';
+import { HEADER_NAVIGATION_LABELS, HEADER_MOBILE_ICONS } from 'constants/data';
 
 //Next Components
 import Image from 'next/image';
 
 //Components
-import { HeaderButton } from '@components/Defaults/Button/Button.component';
+import { HeaderButton } from 'components/Defaults/Button/Button.component';
 
 //Styles depending on the size
 const ICON_STYLE = {

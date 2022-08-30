@@ -1,18 +1,18 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PanelProps } from '@app-types/interface';
-import { STYLE_TYPES } from '@app-types/enum';
+import { PanelProps } from 'types/interface';
+import { STYLE_TYPES } from 'types/enum';
 
 //Constants
-import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from '@constants/data';
+import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from 'constants/data';
 
 //Next Components
 import NextImage from 'next/image';
 
 //Components
-import PanelIcon from '@components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
-import CurriculumItem from '@components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
-import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
+import PanelIcon from 'components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
+import CurriculumItem from 'components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
+import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 //Icons
 import { IoStar, IoDownload } from 'react-icons/io5';

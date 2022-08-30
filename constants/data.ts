@@ -4,8 +4,8 @@ import {
   PanelProps,
   PanelIconProps,
   CurriculumItemProps,
-} from '@app-types/interface';
-import { CONTENT_TYPES, STYLE_TYPES, CONTENT_SIZES } from '@app-types/enum';
+} from 'types/interface';
+import { CONTENT_TYPES, STYLE_TYPES, CONTENT_SIZES } from 'types/enum';
 
 //Icons
 import {

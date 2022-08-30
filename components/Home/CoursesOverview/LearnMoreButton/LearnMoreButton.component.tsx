@@ -1,6 +1,6 @@
 //Types
 import { ReactElement } from 'react';
-import { STYLE_TYPES } from '@app-types/enum';
+import { STYLE_TYPES } from 'types/enum';
 
 //Icons
 import { IoChevronForwardOutline } from 'react-icons/io5';

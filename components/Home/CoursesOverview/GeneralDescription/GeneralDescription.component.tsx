@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import NextImage from 'next/image';
 
 //Components
-import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
+import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 export default function GeneralDescription(): ReactElement {
   return (

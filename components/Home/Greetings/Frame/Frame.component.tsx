@@ -1,8 +1,8 @@
 //Types
 import { ReactElement } from 'react';
-import { STYLE_TYPES, CONTENT_TYPES } from '@app-types/enum';
-import { BASE_CONTENT_TYPES } from '@app-types/types';
-import { FrameProps } from '@app-types/interface';
+import { STYLE_TYPES, CONTENT_TYPES } from 'types/enum';
+import { BASE_CONTENT_TYPES } from 'types/types';
+import { FrameProps } from 'types/interface';
 
 // Styles depending on the type
 const ICON_STYLE: {

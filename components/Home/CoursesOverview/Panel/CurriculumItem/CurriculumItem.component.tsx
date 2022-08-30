@@ -1,7 +1,7 @@
 //Types
 import { ReactElement } from 'react';
-import { CONTENT_TYPES } from '@app-types/enum';
-import { CurriculumItemProps } from '@app-types/interface';
+import { CONTENT_TYPES } from 'types/enum';
+import { CurriculumItemProps } from 'types/interface';
 
 //Styles depending on the type
 const ICON_STYLE: {

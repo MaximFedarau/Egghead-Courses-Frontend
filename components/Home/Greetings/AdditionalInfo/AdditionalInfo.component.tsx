@@ -2,10 +2,10 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { GREETINGS_FRAMES } from '@constants/data';
+import { GREETINGS_FRAMES } from 'constants/data';
 
 //Components
-import Frame from '@components/Home/Greetings/Frame/Frame.component';
+import Frame from 'components/Home/Greetings/Frame/Frame.component';
 
 export default function AdditionalInfo(): ReactElement {
   return (

@@ -1,8 +1,8 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PanelIconProps } from '@app-types/interface';
-import { PANEL_ICON_TYPES } from '@app-types/types';
-import { CONTENT_TYPES } from '@app-types/enum';
+import { PanelIconProps } from 'types/interface';
+import { PANEL_ICON_TYPES } from 'types/types';
+import { CONTENT_TYPES } from 'types/enum';
 
 // Styles depending on the type
 const ICON_STYLE: {

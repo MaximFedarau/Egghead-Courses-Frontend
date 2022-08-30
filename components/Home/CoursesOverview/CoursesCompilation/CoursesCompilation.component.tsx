@@ -2,10 +2,10 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { COURSES_OVERVIEW_PANELS } from '@constants/data';
+import { COURSES_OVERVIEW_PANELS } from 'constants/data';
 
 //Components
-import Panel from '@components/Home/CoursesOverview/Panel/Panel/Panel.component';
+import Panel from 'components/Home/CoursesOverview/Panel/Panel/Panel.component';
 
 export default function CoursesCompilation(): ReactElement {
   return (
