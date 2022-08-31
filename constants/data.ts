@@ -4,6 +4,7 @@ import {
   PanelProps,
   PanelIconProps,
   CurriculumItemProps,
+  TeacherCardProps,
 } from 'types/interface';
 import { CONTENT_TYPES, STYLE_TYPES, CONTENT_SIZES } from 'types/enum';
 
@@ -25,7 +26,7 @@ import {
 } from 'react-icons/io5';
 import { IconType } from 'react-icons';
 
-//Header Navigation Labels
+// Header Navigation Labels
 export const HEADER_NAVIGATION_LABELS = [
   'Home',
   'Product',
@@ -77,7 +78,7 @@ export const GREETINGS_FRAMES: FrameProps[] = [
   },
 ];
 
-// Courses Overview Panels
+// CoursesOverview Panels
 
 export const COURSES_OVERVIEW_PANELS: PanelProps[] = [
   {
@@ -113,7 +114,7 @@ export const PANEL_ICONS: PanelIconProps[] = [
   },
 ];
 
-// Panel Curriculum Info
+// Panel CurriculumItem Info
 
 export const PANEL_CURRICULUM_INFO: CurriculumItemProps[] = [
   {
@@ -130,5 +131,16 @@ export const PANEL_CURRICULUM_INFO: CurriculumItemProps[] = [
     children: '22 hours',
     icon: IoAlarm,
     type: CONTENT_TYPES.INFO,
+  },
+];
+
+//ServiceOverview TeacherCard info
+
+export const TEACHERS_INFO: TeacherCardProps[] = [
+  {
+    image: '/images/service-overview/teachers/lady-1.png',
+  },
+  {
+    image: '/images/service-overview/teachers/lady-2.png',
   },
 ];

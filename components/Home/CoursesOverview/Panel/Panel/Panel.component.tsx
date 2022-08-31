@@ -21,15 +21,7 @@ export default function Panel({ image }: PanelProps): ReactElement {
   const [showActions, setShowActions] = React.useState(false);
   return (
     <article className="flex flex-col max-w-[296px]">
-      <section
-        className="relative w-fit h-fit select-none cursor-pointer"
-        onMouseOver={() => {
-          setShowActions(true);
-        }}
-        onMouseLeave={() => {
-          setShowActions(false);
-        }}
-      >
+      <section className="relative w-fit h-fit select-none">
         <section className="absolute top-5 left-5 z-10 flex justify-center items-center w-[3.2rem] h-6 rounded-md bg-danger font-montserrat font-bold text-sm text-white select-none">
           Sale
         </section>
@@ -37,10 +29,16 @@ export default function Panel({ image }: PanelProps): ReactElement {
           src={image}
           width="296px"
           height="364px"
-          className="rounded-md"
+          className="rounded-md cursor-pointer"
           alt="Course Image"
           placeholder="blur"
           blurDataURL="/images/reusables/placeholder-medium.png"
+          onMouseOver={() => {
+            setShowActions(true);
+          }}
+          onMouseLeave={() => {
+            setShowActions(false);
+          }}
         />
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
