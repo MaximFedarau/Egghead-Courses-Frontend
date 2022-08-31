@@ -2,7 +2,7 @@
 import React, { ReactElement } from 'react';
 
 //Next Components
-import Image, { ImageProps } from 'next/image';
+import NextImage, { ImageProps } from 'next/image';
 
 //Interface for Props
 interface ImageButtonProps extends ImageProps {
@@ -21,7 +21,7 @@ export default function ImageButton({
 }: ImageButtonProps): ReactElement {
   return (
     <button className={`active:opacity-80 ${width} ${height} ${buttonStyle}`}>
-      <Image width="100%" height="100%" {...props} />
+      <NextImage width="100%" height="100%" {...props} />
     </button>
   );
 }
