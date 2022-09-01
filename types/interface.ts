@@ -15,6 +15,7 @@ export interface FrameProps {
 // CoursesOverview Panel props
 export interface PanelProps {
   image: string;
+  path: string;
 }
 
 // PanelIcon props
@@ -35,4 +36,5 @@ export interface CurriculumItemProps {
 
 export interface TeacherCardProps {
   image: string;
+  path: string;
 }

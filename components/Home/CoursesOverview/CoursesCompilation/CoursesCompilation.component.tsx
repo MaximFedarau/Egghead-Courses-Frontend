@@ -22,7 +22,7 @@ export default function CoursesCompilation(): ReactElement {
             physics: Newtonian mechanics
           </p>
         </header>
-        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-y-8 w-full max-w-[1680px] pt-12 lg:pt-16">
+        <section className="xl:grid-cols-4 gap-y-8 elements-grid">
           {COURSES_OVERVIEW_PANELS.map((props) => (
             <Panel key={props.image} {...props} />
           ))}

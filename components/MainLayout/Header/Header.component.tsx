@@ -5,8 +5,10 @@ import { CONTENT_SIZES } from 'types/enum';
 //Constants
 import { HEADER_NAVIGATION_LABELS, HEADER_MOBILE_ICONS } from 'constants/data';
 
-//Next Components
+//Next JS
 import NextImage from 'next/image';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 //Components
 import { HeaderButton } from 'components/Defaults/Button/Button.component';
@@ -22,6 +24,12 @@ const ICON_STYLE = {
 };
 
 export default function Header(): ReactElement {
+  const router = useRouter();
+
+  const onClickHandler = () => {
+    router.push('/');
+  };
+
   return (
     <header className="fixed top-0 z-20 flex items-center md:justify-center w-full h-24 px-1 bg-dark-background/[.85] backdrop-blur-2xl select-none">
       {/* If we remove min-w-[240px], then content will start to stick together on devices with VERY small width (about 60px-70px). 
@@ -40,10 +48,10 @@ export default function Header(): ReactElement {
             />
           </div>
           <nav className="hidden md:flex md:justify-between gap-7">
-            {HEADER_NAVIGATION_LABELS.map((item) => (
-              <a className="header-link" key={item}>
-                {item}
-              </a>
+            {HEADER_NAVIGATION_LABELS.map(({ name, path }) => (
+              <NextLink href={path} key={name}>
+                <a className="header-link">{name}</a>
+              </NextLink>
             ))}
           </nav>
         </section>
@@ -55,8 +63,10 @@ export default function Header(): ReactElement {
               key={Icon.name}
             />
           ))}
-          <a className="header-link">Login</a>
-          <HeaderButton>JOIN US &#8594;</HeaderButton>
+          <NextLink href="/">
+            <a className="header-link">Login</a>
+          </NextLink>
+          <HeaderButton onClick={onClickHandler}>JOIN US &#8594;</HeaderButton>
         </section>
       </nav>
     </header>

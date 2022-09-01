@@ -12,6 +12,7 @@ body {
 
 @layer base {
   html {
+    /* * Remove the highlight, that appears over a link while it's being tapped  */
     -webkit-tap-highlight-color: transparent;
   }
 }
@@ -38,6 +39,9 @@ body {
   }
   .section-header {
     @apply flex flex-col justify-between items-center lg:items-stretch gap-4 [&>:not(:first-child)]:lg:ml-1
+  }
+  .elements-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 justify-items-center w-full max-w-[1680px] pt-12 lg:pt-16
   }
 
   /* * elements */

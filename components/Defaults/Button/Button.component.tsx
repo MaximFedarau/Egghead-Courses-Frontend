@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import { STYLE_TYPES } from 'types/enum';
 
 //Interface for Props
-interface ButtonProps extends React.BaseHTMLAttributes<HTMLDivElement> {
+interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement> {
   children: string;
   type?: STYLE_TYPES;
   buttonStyle?: string;
@@ -32,9 +32,11 @@ export default function Button({
   children,
   type = STYLE_TYPES.CONTAINED,
   buttonStyle,
+  ...props
 }: ButtonProps): ReactElement {
   return (
     <button
+      {...props}
       className={`flex items-center justify-center px-6 py-3 rounded cursor-pointer active:opacity-80 ${BUTTON_STYLE[type].background} ${buttonStyle}`}
     >
       <p
@@ -50,15 +52,19 @@ export default function Button({
 
 //Header
 
-export const HeaderButton = ({ children }: { children: string }) => {
-  return <Button buttonStyle="hidden md:block">{children}</Button>;
+export const HeaderButton = ({
+  children,
+  ...props
+}: Omit<ButtonProps, 'type' | 'buttonStyle'>) => {
+  return (
+    <Button buttonStyle="hidden md:block" {...props}>
+      {children}
+    </Button>
+  );
 };
 
 // Greetings
 
-export const GreetingsButton = (props: {
-  children: string;
-  type?: STYLE_TYPES;
-}) => {
+export const GreetingsButton = (props: Omit<ButtonProps, 'buttonStyle'>) => {
   return <Button buttonStyle="w-[200px] px-10 py-4" {...props} />;
 };

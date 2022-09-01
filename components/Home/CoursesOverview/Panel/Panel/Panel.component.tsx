@@ -6,8 +6,9 @@ import { STYLE_TYPES } from 'types/enum';
 //Constants
 import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from 'constants/data';
 
-//Next Components
+//Next JS
 import NextImage from 'next/image';
+import { useRouter } from 'next/router';
 
 //Components
 import PanelIcon from 'components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
@@ -17,11 +18,26 @@ import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/Lea
 //Icons
 import { IoStar, IoDownload } from 'react-icons/io5';
 
-export default function Panel({ image }: PanelProps): ReactElement {
+export default function Panel({ image, path }: PanelProps): ReactElement {
   const [showActions, setShowActions] = React.useState(false);
+
+  const router = useRouter();
+
+  const onClickHandler = () => {
+    router.push(path);
+  };
+
   return (
     <article className="flex flex-col max-w-[296px]">
-      <section className="relative w-fit h-fit select-none">
+      <section
+        className="relative w-[296px] h-[364px] rounded-md select-none"
+        onMouseOver={() => {
+          setShowActions(true);
+        }}
+        onMouseLeave={() => {
+          setShowActions(false);
+        }}
+      >
         <section className="absolute top-5 left-5 z-10 flex justify-center items-center w-[3.2rem] h-6 rounded-md bg-danger font-montserrat font-bold text-sm text-white select-none">
           Sale
         </section>
@@ -33,12 +49,6 @@ export default function Panel({ image }: PanelProps): ReactElement {
           alt="Course Image"
           placeholder="blur"
           blurDataURL="/images/reusables/placeholder-medium.png"
-          onMouseOver={() => {
-            setShowActions(true);
-          }}
-          onMouseLeave={() => {
-            setShowActions(false);
-          }}
         />
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
@@ -78,11 +88,11 @@ export default function Panel({ image }: PanelProps): ReactElement {
               <CurriculumItem key={props.children} {...props} />
             ))}
           </section>
-          <LearnMoreButton>{STYLE_TYPES.OUTLINED}</LearnMoreButton>
+          <LearnMoreButton onClick={onClickHandler}>
+            {STYLE_TYPES.OUTLINED}
+          </LearnMoreButton>
         </section>
       </section>
     </article>
   );
 }
-
-//absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full

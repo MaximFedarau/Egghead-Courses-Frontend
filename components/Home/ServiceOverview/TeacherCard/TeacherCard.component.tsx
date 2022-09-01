@@ -2,23 +2,39 @@
 import { ReactElement } from 'react';
 import { TeacherCardProps } from 'types/interface';
 
-// Next Components
-import NextImage from 'next/image';
+// Next JS
+import NextImage from 'next/future/image';
+import { useRouter } from 'next/router';
 
 //Icons
 import { IoStar, IoStarOutline } from 'react-icons/io5';
 
-export default function TeacherCard({ image }: TeacherCardProps): ReactElement {
+// ! Warning.
+/* ! 1) We are using NextImage from 'next/future/image', because this component solves issue with border-radius: :hover and cursor: pointer are active
+even outside of cropped image */
+/* ! 2) This solution works only for Chrome and Firefox. Solution for Safari: https://stackoverflow.com/questions/57307248/image-with-border-radius-and-hover-bug-in-safari */
+
+export default function TeacherCard({
+  image,
+  path,
+}: TeacherCardProps): ReactElement {
+  const router = useRouter();
+
+  const onClickHandler = () => {
+    router.push(path);
+  };
+
   return (
     <article className="flex flex-col gap-4 items-center">
-      <div className="w-[256px] h-[256px] rounded-full shadow-2xl">
-        <NextImage
-          width="256px"
-          height="256px"
-          className="rounded-full cursor-pointer select-none active:opacity-90"
-          src={image}
-        />
-      </div>
+      <NextImage
+        width={240}
+        height={240}
+        className="rounded-full cursor-pointer overflow-hidden select-none shadow-2xl hover:animate-smooth-translate hover:-translate-y-1 active:opacity-80"
+        src={image}
+        placeholder="blur"
+        blurDataURL="/images/reusables/placeholder-small.png"
+        onClick={onClickHandler}
+      />
       <p className="text-center tracking-wide section-description">
         Slate helps you see how many more days <br /> you need to work to reach
         your financial <br /> goal for the month and year.

@@ -1,13 +1,20 @@
 //Types
 import { ReactElement } from 'react';
 
-//Next
+//Next JS
 import NextImage from 'next/image';
+import { useRouter } from 'next/router';
 
 //Components
 import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 export default function GeneralDescription(): ReactElement {
+  const router = useRouter();
+
+  const onClickHandler = () => {
+    router.push('/');
+  };
+
   return (
     <section className="my-4 lg:my-0 section-container">
       <section className="lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 section-content">
@@ -21,7 +28,7 @@ export default function GeneralDescription(): ReactElement {
             <br className="hidden lg:block" /> the two major realms of Classical
             physics: <br className="hidden lg:block" /> Newtonian mechanics{' '}
           </p>
-          <LearnMoreButton />
+          <LearnMoreButton onClick={onClickHandler} />
         </header>
         <article className="w-fit h-fit">
           <NextImage

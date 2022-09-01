@@ -27,11 +27,26 @@ import {
 import { IconType } from 'react-icons';
 
 // Header Navigation Labels
-export const HEADER_NAVIGATION_LABELS = [
-  'Home',
-  'Product',
-  'Pricing',
-  'Contact',
+export const HEADER_NAVIGATION_LABELS: {
+  name: string;
+  path: string;
+}[] = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'Product',
+    path: '/',
+  },
+  {
+    name: 'Pricing',
+    path: '/',
+  },
+  {
+    name: 'Contact',
+    path: '/',
+  },
 ];
 
 // Header Mobile Icons
@@ -83,15 +98,19 @@ export const GREETINGS_FRAMES: FrameProps[] = [
 export const COURSES_OVERVIEW_PANELS: PanelProps[] = [
   {
     image: '/images/courses-overview/courses/plan.png',
+    path: '/',
   },
   {
     image: '/images/courses-overview/courses/lady.png',
+    path: '/',
   },
   {
     image: '/images/courses-overview/courses/lightbulb.png',
+    path: '/',
   },
   {
     image: '/images/courses-overview/courses/pencils.png',
+    path: '/',
   },
 ];
 
@@ -139,8 +158,10 @@ export const PANEL_CURRICULUM_INFO: CurriculumItemProps[] = [
 export const TEACHERS_INFO: TeacherCardProps[] = [
   {
     image: '/images/service-overview/teachers/lady-1.png',
+    path: '/',
   },
   {
     image: '/images/service-overview/teachers/lady-2.png',
+    path: '/',
   },
 ];

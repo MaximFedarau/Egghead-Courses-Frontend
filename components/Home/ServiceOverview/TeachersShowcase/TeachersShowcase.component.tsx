@@ -22,7 +22,7 @@ export default function TeachersShowcase(): ReactElement {
             physics: Newtonian mechanics
           </p>
         </header>
-        <section className="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-y-12 w-full max-w-[1680px] pt-12 lg:pt-16">
+        <section className="gap-y-12 elements-grid">
           {TEACHERS_INFO.map((props) => (
             <TeacherCard key={props.image} {...props} />
           ))}
