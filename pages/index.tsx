@@ -1,7 +1,7 @@
 //Types
 import type { NextPage } from 'next';
 
-//Next Components
+//Next JS
 import Head from 'next/head';
 
 //Components

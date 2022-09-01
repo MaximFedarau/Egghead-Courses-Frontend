@@ -59,7 +59,7 @@ export default function Frame({
 }: FrameProps): ReactElement {
   return (
     <article
-      className={`flex flex-col justify-center w-screen h-[100vw] min-w-[280px] min-h-[280px] max-w-[328px] max-h-[328px] p-10 border rounded-md ${CONTENT_STYLE[type].backgroundColor}`}
+      className={`flex flex-col justify-center w-screen min-w-[280px] max-w-[328px] h-[100vw] min-h-[280px] max-h-[328px] p-10 border rounded-md ${CONTENT_STYLE[type].backgroundColor}`}
     >
       <section
         className={`flex justify-center items-center w-[70px] h-[76px] rounded-md ${ICON_STYLE[iconType].backgroundColor}`}

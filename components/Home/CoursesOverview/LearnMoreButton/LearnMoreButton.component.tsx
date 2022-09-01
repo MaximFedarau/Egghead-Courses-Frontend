@@ -33,10 +33,10 @@ export default function LearnMoreButton({
   return (
     <button
       {...props}
-      className={`flex flex-row items-center h-fit w-fit cursor-pointer select-none ${LEARN_MORE_BUTTON_STYLES[type].style} `}
+      className={`flex flex-row items-center h-fit w-fit cursor-pointer select-none ${LEARN_MORE_BUTTON_STYLES[type].style}`}
     >
       <p className="font-bold text-sm text-light-background">Learn more</p>
-      <IoChevronForwardOutline className=" h-7 w-7 text-light-background" />
+      <IoChevronForwardOutline className="h-7 w-7 text-light-background" />
     </button>
   );
 }

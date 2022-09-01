@@ -33,7 +33,7 @@ export default function CurriculumItem({
 }: CurriculumItemProps): ReactElement {
   return (
     <div className="flex flex-row items-center gap-1 overflow-hidden">
-      <Icon className={`${ICON_STYLE[type].color}`} />
+      <Icon className={ICON_STYLE[type].color} />
       <p className="font-montserrat text-xs text-secondary text-ellipsis overflow-hidden whitespace-nowrap">
         {children}
       </p>

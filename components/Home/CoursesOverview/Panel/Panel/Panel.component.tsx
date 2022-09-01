@@ -83,7 +83,7 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
           <p className="font-montserrat font-bold text-success">$6.48</p>
         </section>
         <section className="flex flex-col gap-8 mt-4">
-          <section className="flex flex-row self-center gap-2 w-full">
+          <section className="self-center flex flex-row gap-2 w-full">
             {PANEL_CURRICULUM_INFO.map((props) => (
               <CurriculumItem key={props.children} {...props} />
             ))}

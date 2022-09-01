@@ -12,12 +12,12 @@ body {
 
 @layer base {
   html {
-    /* * Remove the highlight, that appears over a link while it's being tapped  */
+    /* * LITM - Remove the highlight, that appears over a link while it's being tapped  */
     -webkit-tap-highlight-color: transparent;
   }
 }
 
-/* * reason: all (paddings, margins and etc.) looks better */
+/* * LITM - reason of min-width field: all (paddings, margins and etc.) looks better on devices with small width */
 body {
   min-width: 320px;
 }

@@ -9,6 +9,7 @@ interface ButtonProps extends React.BaseHTMLAttributes<HTMLButtonElement> {
   buttonStyle?: string;
 }
 
+// ! Warning - if we move this constant (and other constants with custom styles) outside of file, then TailwindCSS custom classes will not work
 // Style depending on type
 const BUTTON_STYLE: {
   [key in STYLE_TYPES]: {
@@ -21,7 +22,7 @@ const BUTTON_STYLE: {
     color: 'text-white',
   },
   [STYLE_TYPES.OUTLINED]: {
-    background: 'bg-transparent border border-light-background',
+    background: 'border border-light-background bg-transparent',
     color: 'text-light-background',
   },
 };
@@ -37,7 +38,7 @@ export default function Button({
   return (
     <button
       {...props}
-      className={`flex items-center justify-center px-6 py-3 rounded cursor-pointer active:opacity-80 ${BUTTON_STYLE[type].background} ${buttonStyle}`}
+      className={`flex justify-center items-center px-6 py-3 rounded cursor-pointer active:opacity-80 ${BUTTON_STYLE[type].background} ${buttonStyle}`}
     >
       <p
         className={`font-montserrat font-bold select-none ${BUTTON_STYLE[type].color}`}

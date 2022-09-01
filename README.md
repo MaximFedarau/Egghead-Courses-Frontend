@@ -18,4 +18,4 @@
 
 This project has some <ins><b>interesting for me</b></ins> `TailwindCSS`, `CSS` and `Next.js` solutions. 
 <br/>
-All of them are richly commented out and explained, so that you can understand and use them.
+They are marked with the words `LITM` (looks interesting to me) or `Warning`. All these solutions are richly commented out and explained, so that you can understand and use them.
