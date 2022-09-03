@@ -5,6 +5,7 @@ import {
   PanelIconProps,
   CurriculumItemProps,
   TeacherCardProps,
+  InfoBlockProps,
 } from 'types/interface';
 import { CONTENT_TYPES, STYLE_TYPES, CONTENT_SIZES } from 'types/enum';
 
@@ -23,6 +24,9 @@ import {
   IoBarChart,
   IoPerson,
   IoMenu,
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoTwitter,
 } from 'react-icons/io5';
 import { IconType } from 'react-icons';
 
@@ -163,5 +167,88 @@ export const TEACHERS_INFO: TeacherCardProps[] = [
   {
     image: '/images/service-overview/teachers/lady-2.png',
     path: '/',
+  },
+];
+
+// Footer Icons
+export const FOOTER_ICONS = [
+  {
+    Icon: IoLogoFacebook,
+    path: 'https://www.facebook.com/',
+  },
+  {
+    Icon: IoLogoInstagram,
+    path: 'https://www.instagram.com/',
+  },
+  {
+    Icon: IoLogoTwitter,
+    path: 'https://twitter.com/',
+  },
+];
+
+// Footer InfoBlocks info
+export const INFO_BLOCKS_INFO: InfoBlockProps[] = [
+  {
+    title: 'Company info',
+    linksArray: [
+      {
+        text: 'About us',
+        path: '/',
+      },
+      {
+        text: 'Careers',
+        path: '/',
+      },
+      {
+        text: 'We are hiring',
+        path: '/',
+      },
+      {
+        text: 'Blog',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'Features',
+    linksArray: [
+      {
+        text: 'Business marketing',
+        path: '/',
+      },
+      {
+        text: 'User analytic',
+        path: '/',
+      },
+      {
+        text: 'Live chat',
+        path: '/',
+      },
+      {
+        text: 'Unlimited support',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'Resources',
+    linksArray: [
+      {
+        text: 'IOS & Android',
+        path: '/',
+      },
+      {
+        text: 'Watch a demo',
+        path: '/',
+      },
+      {
+        text: 'Customers',
+        path: '/',
+      },
+      {
+        text: 'API',
+        path: '/',
+      },
+    ],
   },
 ];

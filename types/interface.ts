@@ -33,8 +33,16 @@ export interface CurriculumItemProps {
 }
 
 // ServiceOverview TeacherCard props
-
 export interface TeacherCardProps {
   image: string;
   path: string;
+}
+
+// Footer InfoBlock props
+export interface InfoBlockProps {
+  title: string;
+  linksArray: {
+    text: string;
+    path: string;
+  }[];
 }

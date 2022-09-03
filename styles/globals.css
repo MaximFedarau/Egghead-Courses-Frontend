@@ -23,11 +23,18 @@ body {
 }
 
 @layer components {
-  /* * header styles */
+  /* * header and footer styles */
 
   .header-link {
     @apply hidden md:block font-montserrat font-bold text-white cursor-pointer select-none active:opacity-80
   }
+  .footer-link {
+    @apply header-link block
+  }
+  .footer-title {
+    @apply font-montserrat font-bold text-white text-2xl capitalize select-none
+  }
+
   /* * section (blocks) styles*/
 
   /* * views */
