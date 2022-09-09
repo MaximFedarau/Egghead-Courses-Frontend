@@ -31,6 +31,7 @@ export default function TeacherCard({
         height={240}
         className="rounded-full cursor-pointer overflow-hidden select-none shadow-2xl hover:animate-smooth-translate hover:-translate-y-1 active:opacity-80"
         src={image}
+        alt="Teacher"
         placeholder="blur"
         blurDataURL="/images/reusables/placeholder-small.png"
         onClick={onClickHandler}
