@@ -13,7 +13,7 @@ import InfoBlock from 'components/MainLayout/Footer/InfoBlock/InfoBlock.componen
 export default function Footer(): ReactElement {
   return (
     <>
-      <footer className="flex justify-center items-center w-full h-full bg-dark-background py-16 lg:py-20">
+      <footer className="flex justify-center items-center w-full h-full bg-dark-background py-10 lg:py-20">
         {/* LITM - Overwriting default elements-grid (global class) behaviour. */}
         <section className="elements-grid grid-cols-1 lg:grid-cols-4 gap-y-10 max-w-[1180px] pt-0">
           <article className="flex flex-col items-center lg:items-stretch gap-4 lg:gap-6">

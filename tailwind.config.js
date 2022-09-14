@@ -15,6 +15,10 @@ module.exports = {
         'smooth-translate': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateY(-4px)' },
+        },
+        'dropdown-smooth': {
+          '0%': { '-webkit-transform': 'scale(0)', display: 'block'}, // ! display: block is for Safari
+          '100%': { '-webkit-transform': 'scale(1)' },
         }
       }
     },
@@ -82,6 +86,7 @@ module.exports = {
     animation: {
       'panel-icons-smooth': 'panel-icons-smooth 0.5s ease-in-out',
       'smooth-translate': 'smooth-translate 0.5s ease-in-out',
+      'dropdown-smooth': 'dropdown-smooth 0.3s forwards', // ! forwards is for Safari
       'spin': 'spin 1s linear infinite',
       'ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -91,6 +96,7 @@ module.exports = {
       'fade-in-out': 'fade-in-out 1s ease-in-out',
       'slide-in': 'slide-in 1s ease-in-out',
       'slide-out': 'slide-out 1s ease-in-out',
+      'none': 'none',
     }
   },
   plugins: [],
