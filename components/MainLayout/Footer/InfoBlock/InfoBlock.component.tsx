@@ -28,10 +28,8 @@ export default function InfoBlock({
         <a>{title}</a>
         <IoChevronDown
           onClick={toggleLinksVisibility}
-          className={`block lg:hidden text-white cursor-pointer ${
-            areLinksVisible
-              ? 'rotate-180 animate-top-to-bottom'
-              : 'animate-bottom-to-top'
+          className={`block lg:hidden text-white transition-transform duration-300 cursor-pointer ${
+            areLinksVisible ? 'rotate-180 ' : null
           }`}
         />
       </header>

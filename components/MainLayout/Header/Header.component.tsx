@@ -42,6 +42,7 @@ export default function Header(): ReactElement {
               width="56px"
               height="56px"
               layout="fixed"
+              priority // * LITM - This will make sure that image will be loaded before the rest of the page
               className="brightness-0 invert"
               alt="Smiling Egg Image"
               src="/icons/egg.png"

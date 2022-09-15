@@ -30,7 +30,7 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
   return (
     <article className="flex flex-col max-w-[296px]">
       <section
-        className="relative w-[296px] h-[364px] rounded-md select-none"
+        className="relative w-[296px] h-[364px] rounded-md cursor-pointer select-none"
         onMouseOver={() => {
           setShowActions(true);
         }}
@@ -45,7 +45,7 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
           src={image}
           width="296px"
           height="364px"
-          className="rounded-md cursor-pointer"
+          className="rounded-md"
           alt="Course Image"
           placeholder="blur"
           blurDataURL="/images/reusables/placeholder-medium.png"
