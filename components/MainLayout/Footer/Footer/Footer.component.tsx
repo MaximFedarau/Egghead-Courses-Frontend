@@ -40,7 +40,7 @@ export default function Footer(): ReactElement {
         </section>
       </footer>
       <a className="flex justify-center items-center h-16 p-2 font-montserrat font-bold text-sm text-center text-secondary capitalize tracking-widest select-none">
-        Made With Love By Figmaland All Right Reserved{' '}
+        Design Made With Love By Figmaland All Right Reserved{' '}
       </a>
     </>
   );

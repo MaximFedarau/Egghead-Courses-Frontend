@@ -6,7 +6,7 @@ import { InfoBlockProps } from 'types/interface';
 import NextLink from 'next/link';
 
 // Icons
-import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
+import { IoChevronDown } from 'react-icons/io5';
 
 export default function InfoBlock({
   title,
@@ -26,17 +26,14 @@ export default function InfoBlock({
         } lg:mb-2`}
       >
         <a>{title}</a>
-        {areLinksVisible ? (
-          <IoChevronUp
-            onClick={toggleLinksVisibility}
-            className="block lg:hidden text-white cursor-pointer"
-          />
-        ) : (
-          <IoChevronDown
-            onClick={toggleLinksVisibility}
-            className="block lg:hidden text-white cursor-pointer"
-          />
-        )}
+        <IoChevronDown
+          onClick={toggleLinksVisibility}
+          className={`block lg:hidden text-white cursor-pointer ${
+            areLinksVisible
+              ? 'rotate-180 animate-top-to-bottom'
+              : 'animate-bottom-to-top'
+          }`}
+        />
       </header>
       {linksArray.map(({ text, path }) => (
         <NextLink href={path} key={text}>

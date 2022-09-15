@@ -29,7 +29,7 @@ export default function TeacherCard({
       <NextImage
         width={240}
         height={240}
-        className="rounded-full cursor-pointer overflow-hidden select-none shadow-2xl hover:animate-smooth-translate hover:-translate-y-1 active:opacity-80"
+        className="rounded-full cursor-pointer overflow-hidden select-none shadow-2xl hover:animate-smooth-translate hover:-translate-y-1 [&:not(:hover)]:animate-smooth-translate-reverse active:opacity-80"
         src={image}
         alt="Teacher"
         placeholder="blur"
