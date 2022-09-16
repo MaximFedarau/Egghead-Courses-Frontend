@@ -23,7 +23,7 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
 
   const router = useRouter();
 
-  const onClickHandler = () => {
+  const onNavigateToPath = () => {
     router.push(path);
   };
 
@@ -43,12 +43,12 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
         </section>
         <NextImage
           src={image}
+          alt="Course Image"
           width="296px"
           height="364px"
           className="rounded-md"
-          alt="Course Image"
-          placeholder="blur"
           blurDataURL="/images/reusables/placeholder-medium.png"
+          placeholder="blur"
         />
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
@@ -88,7 +88,7 @@ export default function Panel({ image, path }: PanelProps): ReactElement {
               <CurriculumItem key={props.children} {...props} />
             ))}
           </section>
-          <LearnMoreButton onClick={onClickHandler}>
+          <LearnMoreButton onClick={onNavigateToPath}>
             {STYLE_TYPES.OUTLINED}
           </LearnMoreButton>
         </section>

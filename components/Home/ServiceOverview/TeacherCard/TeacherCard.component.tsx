@@ -20,21 +20,21 @@ export default function TeacherCard({
 }: TeacherCardProps): ReactElement {
   const router = useRouter();
 
-  const onClickHandler = () => {
+  const onNavigateToPath = () => {
     router.push(path);
   };
 
   return (
     <article className="flex flex-col gap-4 items-center">
       <NextImage
+        src={image}
+        alt="Teacher"
         width={240}
         height={240}
         className="rounded-full cursor-pointer overflow-hidden select-none shadow-2xl hover:-translate-y-1 transition-transform duration-500 active:opacity-80"
-        src={image}
-        alt="Teacher"
-        placeholder="blur"
+        onClick={onNavigateToPath}
         blurDataURL="/images/reusables/placeholder-small.png"
-        onClick={onClickHandler}
+        placeholder="blur"
       />
       <p className="text-center tracking-wide section-description">
         Slate helps you see how many more days <br /> you need to work to reach

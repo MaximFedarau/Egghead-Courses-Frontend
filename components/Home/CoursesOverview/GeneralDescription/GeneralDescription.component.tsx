@@ -11,7 +11,7 @@ import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/Lea
 export default function GeneralDescription(): ReactElement {
   const router = useRouter();
 
-  const onClickHandler = () => {
+  const onNavigateHome = () => {
     router.push('/');
   };
 
@@ -28,16 +28,16 @@ export default function GeneralDescription(): ReactElement {
             <br className="hidden lg:block" /> the two major realms of Classical
             physics: <br className="hidden lg:block" /> Newtonian mechanics{' '}
           </p>
-          <LearnMoreButton onClick={onClickHandler} />
+          <LearnMoreButton onClick={onNavigateHome} />
         </header>
         <article className="w-fit h-fit">
           <NextImage
             src="/images/courses-overview/description/kids.png"
+            alt="Kids"
             width="513px"
             height="395px"
-            alt="Kids"
-            placeholder="blur"
             blurDataURL="/images/reusables/placeholder-large.png"
+            placeholder="blur"
           />
         </article>
       </section>

@@ -26,7 +26,7 @@ const ICON_STYLE = {
 export default function Header(): ReactElement {
   const router = useRouter();
 
-  const onClickHandler = () => {
+  const onNavigateHome = () => {
     router.push('/');
   };
 
@@ -38,19 +38,16 @@ export default function Header(): ReactElement {
         <section className="flex items-center justify-between w-[50vw] max-w-[500px]">
           {/* * LITM - Wrap it in a div to make it look the same on very small width devices */}
           <div>
-            <NextLink href="/">
-              <a>
-                <NextImage
-                  width="56px"
-                  height="56px"
-                  layout="fixed"
-                  priority // * LITM - This will make sure that image will be loaded before the rest of the page
-                  className="invert cursor-pointer active:opacity-80"
-                  alt="Smiling Egg Image"
-                  src="/icons/egg.png"
-                />
-              </a>
-            </NextLink>
+            <NextImage
+              src="/icons/egg.png"
+              alt="Smiling Egg Image"
+              width="56px"
+              height="56px"
+              className="invert cursor-pointer active:opacity-80"
+              onClick={onNavigateHome}
+              layout="fixed"
+              priority // * LITM - This will make sure that image will be loaded before the rest of the page
+            />
           </div>
           <nav className="hidden md:flex md:justify-between gap-7">
             {HEADER_NAVIGATION_LABELS.map(({ name, path }) => (
@@ -71,7 +68,7 @@ export default function Header(): ReactElement {
           <NextLink href="/">
             <a className="header-link">Login</a>
           </NextLink>
-          <HeaderButton onClick={onClickHandler}>JOIN US &#8594;</HeaderButton>
+          <HeaderButton onClick={onNavigateHome}>JOIN US &#8594;</HeaderButton>
         </section>
       </nav>
     </header>

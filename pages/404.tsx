@@ -14,12 +14,12 @@ const Page404: NextPage = () => {
       <div className="flex flex-col justify-center items-center gap-10 min-h-screen pt-20 bg-dark-background">
         {/* LITM - we use next/future/image, because I want some custom and easy-maintained sizes using className prop */}
         <NextImage
-          src="/icons/fried-egg.png"
+          src="/icons/fried-egg-404.png"
           alt="Fried Egg"
           width={320}
           height={320}
+          className="w-[50vw] h-[50vw] min-w-[240px] max-w-[320px] min-h-[240px] max-h-[320px] invert select-none"
           priority
-          className="w-[20vw] h-[20vw] min-w-[216px] max-w-[320px] min-h-[216px] max-h-[320px] invert select-none"
         />
       </div>
     </>
