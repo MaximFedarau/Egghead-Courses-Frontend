@@ -17,8 +17,10 @@ const HomePage: NextPage = () => {
       </Head>
       <main className="min-h-screen">
         <Greetings />
-        <CoursesOverview />
-        <ServiceOverview />
+        <section>
+          <CoursesOverview />
+          <ServiceOverview />
+        </section>
       </main>
     </>
   );

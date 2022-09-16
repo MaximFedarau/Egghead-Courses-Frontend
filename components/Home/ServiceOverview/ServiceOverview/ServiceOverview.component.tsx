@@ -7,7 +7,7 @@ import NewsSubscription from 'components/Home/ServiceOverview/NewsSubscription/N
 
 export default function ServiceOverview(): ReactElement {
   return (
-    <article className="mb-4 lg:mb-0">
+    <article className="article">
       <TeachersShowcase />
       <NewsSubscription />
     </article>

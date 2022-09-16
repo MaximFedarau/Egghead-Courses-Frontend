@@ -38,6 +38,9 @@ body {
   /* * section (blocks) styles*/
 
   /* * views */
+  .article {
+    @apply first:mt-4 first:lg:mt-0 last:mb-4 last:lg:mb-0
+  }
   .section-container {
     @apply flex justify-center w-full py-greetings bg-white
   }
