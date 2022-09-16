@@ -38,7 +38,7 @@ export default function InfoBlock({
           <a
             className={`footer-link ${
               areLinksVisible ? 'block' : 'hidden'
-            } lg:block animate-dropdown-smooth lg:animate-none`}
+            } lg:block animate-smooth-scaling lg:animate-none`}
           >
             {text}
           </a>

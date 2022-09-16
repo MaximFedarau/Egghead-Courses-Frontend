@@ -38,15 +38,19 @@ export default function Header(): ReactElement {
         <section className="flex items-center justify-between w-[50vw] max-w-[500px]">
           {/* * LITM - Wrap it in a div to make it look the same on very small width devices */}
           <div>
-            <NextImage
-              width="56px"
-              height="56px"
-              layout="fixed"
-              priority // * LITM - This will make sure that image will be loaded before the rest of the page
-              className="brightness-0 invert"
-              alt="Smiling Egg Image"
-              src="/icons/egg.png"
-            />
+            <NextLink href="/">
+              <a>
+                <NextImage
+                  width="56px"
+                  height="56px"
+                  layout="fixed"
+                  priority // * LITM - This will make sure that image will be loaded before the rest of the page
+                  className="invert cursor-pointer active:opacity-80"
+                  alt="Smiling Egg Image"
+                  src="/icons/egg.png"
+                />
+              </a>
+            </NextLink>
           </div>
           <nav className="hidden md:flex md:justify-between gap-7">
             {HEADER_NAVIGATION_LABELS.map(({ name, path }) => (

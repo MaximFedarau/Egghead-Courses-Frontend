@@ -32,7 +32,7 @@ export default function PanelIcon({
   };
   return (
     <section
-      className="flex justify-center items-center h-10 w-10 opacity-80 animate-panel-icons-smooth [&>*]:h-full [&>*]:w-full panel-icon" // * LITM - setting styles for all children
+      className="flex justify-center items-center h-10 w-10 [&>*]:h-full [&>*]:w-full opacity-80 animate-smooth-appearance panel-icon" // * LITM - setting styles for all children
       onClick={onClickHandler}
     >
       {isFilled ? (

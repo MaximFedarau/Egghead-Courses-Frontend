@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'panel-icons-smooth': {
+        'smooth-appearance': {
           // using colors instead of opacity, because opacity causes bugs in Safari with react-icons
           '0%': { backgroundColor: 'transparent', color: 'transparent' },
-          '100%': { backgroundColor: 'white', color: 'black' },
+          '100%': { backgroundColor: 'default', color: 'default' }, // * LITM - default is a color of the element (e.g. white), which is set by developer, or initial (transparent)
         },
-        'dropdown-smooth': {
-          '0%': { '-webkit-transform': 'scale(0)', display: 'block'}, // ! display: block is for Safari
-          '100%': { '-webkit-transform': 'scale(1)' },
+        'smooth-scaling': {
+          '0%': { transform: 'scale(0)', display: 'block'}, // ! display: block is for Safari
+          '100%': { transform: 'scale(1)' },
         }
       }
     },
@@ -80,8 +80,8 @@ module.exports = {
       'greetings': 'min(11%, 200px)'
     },
     animation: {
-      'panel-icons-smooth': 'panel-icons-smooth 0.5s ease-in-out',
-      'dropdown-smooth': 'dropdown-smooth 0.3s forwards', // ! forwards is for Safari
+      'smooth-appearance': 'smooth-appearance 0.5s ease-in-out',
+      'smooth-scaling': 'smooth-scaling 0.3s forwards', // ! forwards is for Safari
       'spin': 'spin 1s linear infinite',
       'ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
