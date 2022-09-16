@@ -2,19 +2,19 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { COURSES_OVERVIEW_PANELS } from 'constants/data';
+import { TEACHERS_INFO } from 'constants/data';
 
 //Components
-import Panel from 'components/Home/CoursesOverview/Panel/Panel/Panel.component';
+import TeacherCard from 'components/Home/ServiceOverview/TeacherCard/TeacherCard.component';
 
-export default function CoursesCompilation(): ReactElement {
+export default function TeachersShowcase(): ReactElement {
   return (
     <section className="section-container">
       <section className="section-content">
         <header className="section-header">
           <div className="bg-light-background text-light-background section-stripe" />
           <p className="section-title">
-            Make online <br className="block lg:hidden" /> education accessible
+            Our experts <br className="block lg:hidden" /> teacher
           </p>
           <p className="section-description">
             Problems trying to resolve the conflict between{' '}
@@ -22,9 +22,9 @@ export default function CoursesCompilation(): ReactElement {
             physics: Newtonian mechanics
           </p>
         </header>
-        <section className="xl:grid-cols-4 gap-y-8 elements-grid">
-          {COURSES_OVERVIEW_PANELS.map((props) => (
-            <Panel key={props.image} {...props} />
+        <section className="gap-y-12 elements-grid">
+          {TEACHERS_INFO.map((props) => (
+            <TeacherCard key={props.image} {...props} />
           ))}
         </section>
       </section>

@@ -1,8 +1,8 @@
 //Types
 import { ReactElement } from 'react';
-import { STYLE_TYPES, CONTENT_TYPES } from '@app-types/enum';
-import { BASE_CONTENT_TYPES } from '@app-types/types';
-import { FrameProps } from '@app-types/interface';
+import { STYLE_TYPES, CONTENT_TYPES } from 'types/enum';
+import { BASE_CONTENT_TYPES } from 'types/types';
+import { FrameProps } from 'types/interface';
 
 // Styles depending on the type
 const ICON_STYLE: {
@@ -59,7 +59,7 @@ export default function Frame({
 }: FrameProps): ReactElement {
   return (
     <article
-      className={`flex flex-col justify-center w-screen h-[100vw] max-w-[328px] max-h-[328px] p-10 border rounded-md aspect-square ${CONTENT_STYLE[type].backgroundColor}`}
+      className={`flex flex-col justify-center w-screen min-w-[280px] max-w-[328px] h-[100vw] min-h-[280px] max-h-[328px] p-10 border rounded-md ${CONTENT_STYLE[type].backgroundColor}`}
     >
       <section
         className={`flex justify-center items-center w-[70px] h-[76px] rounded-md ${ICON_STYLE[iconType].backgroundColor}`}

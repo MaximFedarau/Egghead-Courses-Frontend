@@ -1,9 +1,15 @@
 //Types
-import { ReactElement } from 'react';
-import { STYLE_TYPES } from '@app-types/enum';
+import React, { ReactElement } from 'react';
+import { STYLE_TYPES } from 'types/enum';
 
 //Icons
 import { IoChevronForwardOutline } from 'react-icons/io5';
+
+//Interface for Props
+interface LearnMoreButtonProps
+  extends React.BaseHTMLAttributes<HTMLButtonElement> {
+  children?: STYLE_TYPES;
+}
 
 // Style depending on type
 const LEARN_MORE_BUTTON_STYLES: {
@@ -22,15 +28,15 @@ const LEARN_MORE_BUTTON_STYLES: {
 
 export default function LearnMoreButton({
   children: type = STYLE_TYPES.CONTAINED,
-}: {
-  children?: STYLE_TYPES;
-}): ReactElement {
+  ...props
+}: LearnMoreButtonProps): ReactElement {
   return (
     <button
-      className={`flex flex-row items-center h-fit w-fit cursor-pointer select-none ${LEARN_MORE_BUTTON_STYLES[type].style} `}
+      {...props}
+      className={`flex flex-row items-center h-fit w-fit cursor-pointer select-none ${LEARN_MORE_BUTTON_STYLES[type].style}`}
     >
       <p className="font-bold text-sm text-light-background">Learn more</p>
-      <IoChevronForwardOutline className=" h-7 w-7 text-light-background" />
+      <IoChevronForwardOutline className="h-7 w-7 text-light-background" />
     </button>
   );
 }

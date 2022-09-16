@@ -1,28 +1,36 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PanelProps } from '@app-types/interface';
-import { STYLE_TYPES } from '@app-types/enum';
+import { PanelProps } from 'types/interface';
+import { STYLE_TYPES } from 'types/enum';
 
 //Constants
-import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from '@constants/data';
+import { PANEL_ICONS, PANEL_CURRICULUM_INFO } from 'constants/data';
 
-//Next Components
+//Next JS
 import NextImage from 'next/image';
+import { useRouter } from 'next/router';
 
 //Components
-import PanelIcon from '@components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
-import CurriculumItem from '@components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
-import LearnMoreButton from '@components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
+import PanelIcon from 'components/Home/CoursesOverview/Panel/PanelIcon/PanelIcon.component';
+import CurriculumItem from 'components/Home/CoursesOverview/Panel/CurriculumItem/CurriculumItem.component';
+import LearnMoreButton from 'components/Home/CoursesOverview/LearnMoreButton/LearnMoreButton.component';
 
 //Icons
 import { IoStar, IoDownload } from 'react-icons/io5';
 
-export default function Panel({ image }: PanelProps): ReactElement {
+export default function Panel({ image, path }: PanelProps): ReactElement {
   const [showActions, setShowActions] = React.useState(false);
+
+  const router = useRouter();
+
+  const onNavigateToPath = () => {
+    router.push(path);
+  };
+
   return (
     <article className="flex flex-col max-w-[296px]">
       <section
-        className="relative w-fit h-fit select-none cursor-pointer"
+        className="relative w-[296px] h-[364px] rounded-md cursor-pointer select-none"
         onMouseOver={() => {
           setShowActions(true);
         }}
@@ -35,12 +43,12 @@ export default function Panel({ image }: PanelProps): ReactElement {
         </section>
         <NextImage
           src={image}
+          alt="Course Image"
           width="296px"
           height="364px"
           className="rounded-md"
-          alt="Course Image"
-          placeholder="blur"
           blurDataURL="/images/reusables/placeholder-medium.png"
+          placeholder="blur"
         />
         {showActions && (
           <section className="absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full">
@@ -75,16 +83,16 @@ export default function Panel({ image }: PanelProps): ReactElement {
           <p className="font-montserrat font-bold text-success">$6.48</p>
         </section>
         <section className="flex flex-col gap-8 mt-4">
-          <section className="flex flex-row self-center gap-2 w-full">
+          <section className="self-center flex flex-row gap-2 w-full">
             {PANEL_CURRICULUM_INFO.map((props) => (
               <CurriculumItem key={props.children} {...props} />
             ))}
           </section>
-          <LearnMoreButton>{STYLE_TYPES.OUTLINED}</LearnMoreButton>
+          <LearnMoreButton onClick={onNavigateToPath}>
+            {STYLE_TYPES.OUTLINED}
+          </LearnMoreButton>
         </section>
       </section>
     </article>
   );
 }
-
-//absolute bottom-[10%] z-10 flex justify-center items-center gap-3 w-full

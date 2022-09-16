@@ -1,8 +1,8 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PanelIconProps } from '@app-types/interface';
-import { PANEL_ICON_TYPES } from '@app-types/types';
-import { CONTENT_TYPES } from '@app-types/enum';
+import { PanelIconProps } from 'types/interface';
+import { PANEL_ICON_TYPES } from 'types/types';
+import { CONTENT_TYPES } from 'types/enum';
 
 // Styles depending on the type
 const ICON_STYLE: {
@@ -32,7 +32,7 @@ export default function PanelIcon({
   };
   return (
     <section
-      className="flex justify-center items-center h-10 w-10 opacity-80 animate-panel-icons-smooth panel-icon [&>*]:h-full [&>*]:w-full"
+      className="flex justify-center items-center h-10 w-10 [&>*]:h-full [&>*]:w-full opacity-80 animate-smooth-appearance panel-icon" // * LITM - setting styles for all children
       onClick={onClickHandler}
     >
       {isFilled ? (

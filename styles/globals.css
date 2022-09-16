@@ -12,14 +12,49 @@ body {
 
 @layer base {
   html {
+    /* * LITM - Remove the highlight, that appears over a link while it's being tapped  */
     -webkit-tap-highlight-color: transparent;
   }
 }
 
+/* * LITM - reason of min-width field: all (paddings, margins and etc.) looks better on devices with small width */
+body {
+  min-width: 320px;
+}
+
 @layer components {
+  /* * header and footer styles */
+
   .header-link {
     @apply hidden md:block font-montserrat font-bold text-white cursor-pointer select-none active:opacity-80
   }
+  .footer-link {
+    @apply header-link block
+  }
+  .footer-title {
+    @apply font-montserrat font-bold text-white text-2xl capitalize select-none
+  }
+
+  /* * section (blocks) styles*/
+
+  /* * views */
+  .article {
+    @apply first:mt-4 first:lg:mt-0 last:mb-4 last:lg:mb-0
+  }
+  .section-container {
+    @apply flex justify-center w-full py-greetings bg-white
+  }
+  .section-content {
+    @apply flex flex-col w-full max-w-[1680px] px-[3vw]
+  }
+  .section-header {
+    @apply flex flex-col justify-between items-center lg:items-stretch gap-4 [&>:not(:first-child)]:lg:ml-1
+  }
+  .elements-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 justify-items-center w-full max-w-[1680px] pt-12 lg:pt-16
+  }
+
+  /* * elements */
   .section-stripe {
     @apply hidden lg:block w-full lg:w-24 mb-3 border-4
   }
