@@ -15,11 +15,11 @@ const HomePage: NextPage = () => {
       <Head>
         <title>EggHead Courses</title>
       </Head>
-      <div className="min-h-screen">
+      <main className="min-h-screen">
         <Greetings />
         <CoursesOverview />
         <ServiceOverview />
-      </div>
+      </main>
     </>
   );
 };

@@ -16,7 +16,7 @@ export default function GeneralDescription(): ReactElement {
   };
 
   return (
-    <section className="my-4 lg:my-0 section-container">
+    <section className="section-container">
       <section className="lg:flex-row justify-between items-center lg:items-stretch gap-12 lg:gap-0 section-content">
         <header className="self-center lg:gap-0 lg:h-[296px] section-header">
           <div className="bg-danger text-danger section-stripe" />

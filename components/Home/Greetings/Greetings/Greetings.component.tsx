@@ -7,9 +7,9 @@ import AdditionalInfo from 'components/Home/Greetings/AdditionalInfo/AdditionalI
 
 export default function Greetings(): ReactElement {
   return (
-    <section className="flex flex-col gap-12 lg:gap-0 pt-20 bg-dark-background">
+    <article className="flex flex-col gap-12 lg:gap-0 pt-20 bg-dark-background">
       <MainInfo />
       <AdditionalInfo />
-    </section>
+    </article>
   );
 }

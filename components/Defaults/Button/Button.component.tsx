@@ -69,3 +69,11 @@ export const HeaderButton = ({
 export const GreetingsButton = (props: Omit<ButtonProps, 'buttonStyle'>) => {
   return <Button buttonStyle="w-[200px] px-10 py-4" {...props} />;
 };
+
+// NewsSubscription
+
+export const NewsSubscriptionButton = (
+  props: Omit<ButtonProps, 'buttonStyle'>,
+) => {
+  return <Button buttonStyle="rounded-r-md rounded-l-none" {...props} />;
+};

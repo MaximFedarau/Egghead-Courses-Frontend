@@ -7,9 +7,9 @@ import CoursesCompilation from 'components/Home/CoursesOverview/CoursesCompilati
 
 export default function CoursesOverview(): ReactElement {
   return (
-    <>
+    <article className="mt-4 lg:mt-0">
       <GeneralDescription />
       <CoursesCompilation />
-    </>
+    </article>
   );
 }

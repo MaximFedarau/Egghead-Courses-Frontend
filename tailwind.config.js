@@ -24,6 +24,8 @@ module.exports = {
       'light-background': "#23A6F0",
       'white': '#ffffff',
       'black': '#000000',
+      'light-gray': '#e6e6e6',
+      'lightest-gray': '#f9f9f9',
       'danger': '#e53e3e',
       'success': '#40BB15',
       'alert': '#E77C40',
