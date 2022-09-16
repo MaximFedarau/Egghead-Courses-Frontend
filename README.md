@@ -1,6 +1,7 @@
 <h1 align="center">🧐 About project</h1> 
 
-***Please, read the description***
+- 🌱 Goal of this project is to improve my layout, `TailwindCSS` and `Next.js` skills.
+- ⚡️ Scroll down to learn more about the app.
 
 <h1 align="center">⚙️ TailwindCSS Classes Order</h1>
 
